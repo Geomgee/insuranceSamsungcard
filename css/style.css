@@ -1,0 +1,678 @@
+/*본격 css*/
+section {
+    max-width: 1225px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+/**********/
+/*carousel*/
+section#carousel {
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+#carouselExampleIndicators {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    opacity: 0;
+}
+
+.carousel-inner {
+    border-radius: 10px;
+}
+
+.carousel-inner img {
+    /*width: 100%;*/
+    height: 462px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    min-width: 0;
+    height: 50%;
+    top: 30px;
+    left: 40px;
+    text-align: left;
+    color: #686868;
+}
+
+.carousel-caption h5 {
+    color: #121212;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 40px;
+}
+
+ol.carousel-indicators {
+    background-color: rgba(79, 79, 79, 0.3);
+    align-items: center;
+    width: 75px;
+    height: 32px;
+    border-radius: 20px;
+    margin-left: 50px;
+    bottom: 35px;
+    padding: 0 0 0 5px;
+    z-index: 2;
+}
+
+ol.carousel-indicators li {
+    background-color: white;
+    width: 6px;
+    height: 6px;
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor:pointer;
+}
+
+ol.carousel-indicators li.active {
+    width: 15px;
+    border-radius: 15px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.carousel button {
+    border: none;
+    background-color: transparent;
+}
+
+.material-symbols-outlined {
+    display: none;
+    color: white;
+    padding: 0;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    margin: -1% 0 0 -1px;
+}
+
+/*일시정지 버튼*/
+.pauseBtn {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.pauseBtn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    width: 2px;
+    height: 6px;
+    background: white;
+}
+
+.pauseBtn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 13px;
+    width: 2px;
+    height: 6px;
+    background: white;
+}
+
+/**********/
+/*section2*/
+#content-area {
+    max-width: 1224px;
+    margin: 42px auto;
+    width: 100%;
+    /*height: 100%;*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 29px 24px;
+    font-size: 14px;
+    color: #595959;
+    /*position: relative;*/
+}
+
+#content-area > div {
+    position: relative;
+    flex-direction: column;
+    gap: 17px;
+    flex-grow: 1;
+}
+
+#content-area div h5 {
+    font-weight: 700;
+    line-height: 21px;
+}
+
+#content-area .know {
+    width: 808px;
+    height: 250px;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+#content-area .need {
+    width: 392px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+#content-area .event {
+    position: relative;
+    width: 808px;
+    height: 322px;
+}
+
+#content-area .counsel {
+    width: 392px;
+    /*height: 322px;*/
+    gap: 17px;
+    display: flex;
+    position: relative;
+}
+
+#content-area h5 {
+    /*display: block;*/
+    font-weight: bolder;
+    font-size: 16px;
+    color: black;
+    position: absolute;
+}
+
+#content-area .manImg {
+    background: url("../img/img-maincon01-title.png") center/cover;
+    width: 216px;
+    height: 212px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*know*/
+#content-area div > h5 {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    left: 0;
+}
+
+#content-area .know .box {
+    width: 100%;
+    background-color: #E5EFFF;
+    position: absolute;
+    bottom: 0;
+    padding: 52px 31% 51px 24px;
+    border-radius: 12px;
+}
+
+.know .manImg {
+    width: 216px;
+    height: 212px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.know ul {
+    width: 532px;
+    height: 109px;
+    border-radius: 12px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.know img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 34px;
+    left: 25px;
+}
+
+.know img:nth-of-type(2) {
+    left: 290px;
+}
+
+.know ul li a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 6px;
+    padding: 32px 24px 32px 55px;
+}
+
+.know ul li:last-child::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 25%;
+    width: 1px;
+    height: 50%;
+    background-color: #787878;
+    opacity: 0.3;
+}
+
+#content-area li strong {
+    color: black;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0;
+}
+
+#content-area li span {
+    width: 100%;
+    line-height: 18px;
+    color: #666666;
+}
+
+/*need*/
+.need ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.need ul li {
+    border-radius: 12px;
+    gap: 6px;
+    width: 100%;
+    background-color: #f4F6FB;
+    height: 100px;
+    padding: 32px 24px 32px 72px;
+    margin: 0;
+}
+
+#content-area .need ul li img {
+    position: absolute;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    margin-left: -48px;
+}
+
+#content-area .need ul li strong {
+    float: left;
+    display: block;
+    line-height: 36px;
+    font-size: 16px;
+    left: 30px;
+}
+
+.need ul li strong::after {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    right: 30px;
+    transform: translateY(40%);
+    background: url("../img/icon-common.png") no-repeat;
+    background-size: 120px 20px;
+}
+
+/*event section3*/
+.event {
+    width: 100%;
+    display: flex;
+    bottom: 0;
+}
+
+.event ul {
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.event ul li {
+    float: left;
+    width: 255px;
+    /*background-color: #f4F6FB;*/
+    border-radius: 12px;
+    bottom: 0;
+}
+
+.event ul li div {
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.event ul li a {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 18px;
+    width: 100%;
+    height: 116px;
+    background-color: #f4F6FB;
+    z-index: 999;
+    border-radius: 0 0 12px 12px;
+
+}
+
+.event img {
+    display: block;
+    position: relative;
+    /*width: 255px;*/
+    height: 168px;
+    width: 100%;
+    /*todo 이미지 영역 확인;*/
+    transition: 0.7s;
+    border-radius: 12px 12px 0 0;
+    z-index: 1;
+}
+
+.event img:hover {
+    bottom: 0;
+    /*todo 이미지 영역 확인;*/
+    transform: scale(1.1);
+    /*object-fit: none;*/
+}
+
+.event ul li span {
+    bottom: 0;
+}
+
+
+/*counsel section4*/
+.counsel .box {
+    border: 1px solid #E2E5EB;
+    width: 100%;
+    height: 284px;
+    border-radius: 12px;
+    color: #303030;
+    padding: 40px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+
+}
+
+.counsel .box div {
+    border-radius: 12px;
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #2090FF;
+    color: white;
+
+}
+
+.counsel span {
+    width: 100%;
+    font-size: 16px;
+    display: block;
+}
+
+.counsel img {
+    width: 100px;
+}
+
+/*partner*/
+hr.c-g {
+    border-top: 1px solid #666666;
+}
+
+.partner img {
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+.slick-list {
+    width: 100%;
+}
+
+/*slick button*/
+.slick-prev, .slick-next {
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/*****************************************************************/
+/*                          미디어 쿼리                            */
+/*****************************************************************/
+/*1) window tab size : 1274 | <wrapper white section 80% under>*/
+@media screen and (max-width: 1274px) {
+    #wrapper #content-area > div {
+        width: 100%;
+    }
+
+    .event img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .event ul {
+        gap: 20px;
+    }
+
+    .event ul li {
+        display: block;
+    }
+
+    .withNeed ul li:last-child {
+        clear: both;
+        padding-top: 10px;
+    }
+
+}
+
+/*2) laptop 환경 | 디바이스 장치가 최대 1199px일 때 1199px under*/
+@media screen and (max-width: 1199px) {
+    .event ul li a strong {
+        display: -webkit-box;
+        width: 100%;
+        height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 16px;
+    }
+}
+
+
+/*3) mobile 환경 | 디바이스 장치가 최소 767px일 때*/
+@media screen and (max-width: 767px) {
+    #wrapper {
+        /*padding: 0 21px;*/
+        transition: all 0.5s;
+        min-width: 320px;
+    }
+
+    #content-area {
+        top: 20px;
+        gap: 50px;
+    }
+
+    /*모바일 글씨크기 변경*/
+    #content-area h5 {
+        font-size: 1.4em;
+    }
+
+    /*carousel*/
+    section#carousel {
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-inner {
+        border-radius: 10px;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 240px;
+        object-position: bottom;
+    }
+
+    ol.carousel-indicators {
+        margin-left: 24px;
+        bottom: 2px;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 10px;
+        top: 10px;
+    }
+
+    .carousel-caption h5 {
+        color: #121212;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+
+    /*know*/
+    #content-area .know {
+        height: 254px;
+    }
+
+    #content-area .know h5 {
+        display: block;
+        width: 90px;
+        left: 0;
+        position: absolute;
+    }
+
+    #content-area .know .manImg {
+        width: 170px;
+        height: 132px;
+        top: -37px;
+        right: 20px;
+    }
+
+    #content-area .know .box {
+        width: 100%;
+        height: 196px;
+        background-color: white;
+        border: 1px solid #E2E5EB;
+        z-index: 1;
+        padding: 0;
+    }
+
+    #content-area .know .box ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    #content-area .know .box ul li {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    #content-area .know .box ul li a {
+        height: 93px;
+        width: 100%;
+    }
+
+    .know ul li:last-child::after {
+        width: 95%;
+        height: 1px;
+        top: 52%;
+        left: 16px;
+    }
+
+    /*need*/
+    #content-area .need {
+        height: 100%;
+    }
+
+    .need ul {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .need ul li {
+        width: 50%;
+        float: left;
+    }
+
+    .need ul li:first-child::after {
+        position: absolute;
+        right: 50%;
+        margin-right: 38px;
+    }
+
+    /*event*/
+    #wrapper #content-area .event {
+        display: flex;
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .event .scroll-box {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        position: relative;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    .event ul li a strong {
+        display: block;
+        float: left;
+        /*height: max-content;*/
+        min-width: 160px;
+        white-space: pre-wrap;
+    }
+
+    .event ul li {
+        /*overflow: unset;*/
+    }
+
+    .event ul li, .event ul li a {
+        width: 100%;
+    }
+
+    .event ul li img {
+        width: auto;
+        height: 30vw;
+        display: block;
+    }
+
+    /*counsel-mobile*/
+    .counsel .box {
+        height: 120%;
+    }
+}

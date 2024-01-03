@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>이벤트 목록 - 샘송카드 다이렉트 보험</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="//static12.samsungcard.com/images/insurance/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- 부트스트랩 css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <!--css file link-->
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common_sub.css"/>
+    <link rel="stylesheet" type="text/css" href="css/event.css"/>
+
+    <!--제이쿼리-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<script>
+    $(function () {
+        /*nav 영역*/
+        let menuBtn = $(".navR .btn-menu");
+        let closeBtn = $(".navR .btn-close");
+        let searchBtn = $(".navR .btn-search");
+        let main_menu = $(".main");
+        let nav_menu = $(".nav-menu");
+        let search_menu = $(".nav-search");
+        let shadow = $(".shadowWrap");
+
+        nav_menu.hide();
+        search_menu.hide();
+        closeBtn.eq(0).hide();
+        closeBtn.eq(1).hide();
+        shadow.hide();
+
+        menuBtn.click(function () {
+            nav_menu.show();
+            search_menu.hide();
+            main_menu.hide();
+            menuBtn.hide();
+            searchBtn.show();
+            closeBtn.eq(0).show();
+            shadow.show();
+        })
+
+        searchBtn.click(function () {
+            nav_menu.hide();
+            search_menu.show();
+            searchBtn.show();
+            main_menu.hide();
+            menuBtn.show();
+            searchBtn.hide();
+            closeBtn.eq(0).show();
+            closeBtn.eq(1).hide();
+            shadow.show();
+        })
+
+        closeBtn.click(function () {
+            nav_menu.hide();
+            search_menu.hide();
+            main_menu.show();
+            menuBtn.show();
+            searchBtn.show();
+            closeBtn.hide();
+            shadow.hide();
+        })
+
+        /*withNeedINmobileBtn*/
+        let withNeedINmobileBtn = $(".withNeedINmobileBtn");
+        let withNeedINmobileArrow = $(".arrow-down");
+        let withNeedINmobileList = $(".withNeedINmobileList");
+
+        withNeedINmobileList.hide();
+
+        withNeedINmobileBtn.click(function () {
+            withNeedINmobileList.toggle();
+            withNeedINmobileArrow.toggleClass("arrow-active");
+        });
+
+        /* up btn */
+        let upBtn = $(".width #upBtn");
+
+        upBtn.click(function () {
+            alert("sdf");
+            // window.scrollTo({ top: 0, behavior: "smooth" });
+            $('html, body').animate({
+                scrollTop: 0
+            }, 400)
+            return false;
+        });
+    });
+</script>
+
+<body>
+<div class="shadowWrap"></div>
+<div id="wrapper">
+    <header>
+        <nav>
+            <!--메인 화면에서 보이는 메뉴-->
+            <div id="main-menu">
+                <!--nav 최상단 영역 | 홈페이지 / 로그인-->
+                <div class="headerTop">
+                    <span><a href="#">삼성카드 홈페이지</a></span>
+                    <span><a href="#">로그인</a></span>
+                </div>
+                <!--main nav-->
+                <div class="headerBot">
+                    <h2 id="logo"><a href="index.html"></a></h2>
+                    <ul class="main">
+                        <li><a href="product.html">상품</a></li>
+                        <li><a href="event.html">이벤트</a></li>
+                        <li><a href="counsel.html">상담예약</a></li>
+                    </ul>
+                    <div class="navR">
+                        <button type="button" class="btn-search"></button>
+                        <button type="button" class="btn-close"></button>
+                        <button type="button" class="btn-menu"></button>
+                        <button type="button" class="btn-close"></button>
+                    </div>
+                </div>
+            </div>
+            <!--메뉴 버튼 클릭 시 보이는 네비-->
+            <div class="nav-menu">
+                <ul>
+                    <li class="menu-top">카테고리</li>
+                    <li><a href="#">자동차</a></li>
+                    <li><a href="#">기타</a></li>
+                    <li><a href="#">암·건강</a></li>
+                    <li><a href="#">이륜차·운전자</a></li>
+                    <li><a href="#">여행·레저</a></li>
+                </ul>
+                <ul>
+                    <li class="menu-top">상품 모아보기</li>
+                    <li><a href="#">인기순위</a></li>
+                    <li><a href="#">신규상품</a></li>
+                    <li><a href="#">보험사별</a></li>
+                    <li><a href="#">전체보기</a></li>
+                </ul>
+                <ul>
+                    <li class="menu-top">혜택</li>
+                    <li><a href="event.html">이벤트</a></li>
+                    <li><a href="#">보험상담</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="txtBox m-4">
+        <h3 class="fontB">다양한 혜택 확인하세요!</h3>
+        <span>고객님을 위한 특별한 보험이벤트, 여기서만 확인!</span>
+    </div>
+    <section>
+        <div class="eventBoxParent">
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_1.png" alt="">
+                <ul>
+                    <li class="fontB">
+                        AIG입원비보험 월 1만원 이상 삼성카드 결제 시, 신세계 상품권 혜택
+                    </li>
+                    <li class="font13 ">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_9.jpg" alt="">
+                <ul>
+                    <li class="fontB">
+                        자동차보험 삼성카드에서 가입하면 신세계상품권 선물
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117.png" alt="">
+                <ul>
+                    <li class="fontB">
+                        메리츠 펫보험 가입&결제 시 최대 3만원 신세계상품권 혜택
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/Driver_insrc_M_thumb_300x117.png" alt="">
+                <ul>
+                    <li class="fontB">
+                        운전자 보험료 월 1만원 이상 결제시 1만원 신세계 상품권 혜택
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_1(1).png" alt="">
+                <ul>
+                    <li class="fontB">
+                        미래에셋생명 온라인보험
+                        최대 3만원 상품권 혜택
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_2.png" alt="">
+                <ul>
+                    <li class="fontB">
+                        치아보험료 월1만원 이상 결제시 1만원 신세계 상품권 혜택
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117.jpg" alt="">
+                <ul>
+                    <li class="fontB">
+                        보장 든든한 암보험 신세계상품권 혜택까지
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_3.png" alt="">
+                <ul>
+                    <li class="fontB">
+                        안전한 라이딩의 필수품 이륜차보험도 다이렉트로
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_1.jpg" alt="">
+                <ul>
+                    <li class="fontB">
+                        걷는 만큼 혜택으로 돌려주는 표적항암 미니보험 상품권 혜택
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_2.jpg" alt="">
+                <ul>
+                    <li class="fontB">
+                        아파도 카드값 걱정없는 건강보험 가입하면 신세계 상품권 혜택
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_3.jpg" alt="">
+                <ul>
+                    <li class="fontB">
+                        월 보험료 1만원 이상 결제시 1만원 신세계상품권 혜택
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_4.png" alt="">
+                <ul>
+                    <li class="fontB">
+                        입원비 걱정을 첫날부터 덜어주는 보험 신세계상품권 혜택까지
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_5.png" alt="">
+                <ul>
+                    <li class="fontB">
+                        내 치아 건강 챙기고 최대 30,000원 신세계 상품권 받기
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_6.png" alt="">
+                <ul>
+                    <li class="fontB">
+                        보험료를 포인트로 여행자보험 알아보기
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+            <div class="eventBox">
+                <img src="./img/thumb_300x117_7.png" alt="">
+                <ul>
+                    <li class="fontB">
+                        어려운 보험 간편하게 상담하고 상품권 혜택
+                    </li>
+                    <li class="font13">
+                        2023.11.01 ~ 2023.12.31
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- footer -->
+<footer>
+    <div class="realFooter">
+        <div class="footerTop">
+            <ul class="tel">
+                <li>
+                    대표전화
+                    <span>1588-8700</span>
+                </li>
+                <li>
+                    카드신청
+                    <span>1688-1133</span>
+                </li>
+                <li>
+                    보험상품 모집 수수료율
+                </li>
+            </ul>
+            <hr>
+            <ul class="sns">
+                <li>
+                    <a href="#">instagram</a>
+                </li>
+                <li>
+                    <a href="#">facebook</a>
+                </li>
+                <li>
+                    <a href="#">youtube</a>
+                </li>
+                <li>
+                    <a href="#">kakao</a>
+                </li>
+                <li>
+                    <a href="#">blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footerBot">
+            <ul>
+                <li>
+                    <strong>회사소개</strong>
+                </li>
+                <li>이용약관</li>
+                <li>
+                    <strong>개인정보처리방침</strong>
+                </li>
+            </ul>
+            <ul>
+                <li>사업자정보확인</li>
+                <li>손해보험 보험대리점등록증</li>
+                <li>생명보험 보험대리점등록증</li>
+            </ul>
+        </div>
+        <div class="withNeed">
+            <ul>
+                <li>대표이사</li>
+                <li><span>김대환</span></li>
+                <li><span>서울 중구 세종대로 67 (04514)</span></li>
+                <li>사업자등록번호</li>
+                <li><span>202-81-45602</span></li>
+                <li>통신판매업 신고번호</li>
+                <li><span>제 2009-서울중구-1449호</span></li>
+                <li>© SAMSUNG CARD CO., LTD. All rights reserved.</li>
+                <li>삼성카드는 보험업법 제87조에 따라 금융위원회에 등록된 금융기관 보험대리점입니다.</li>
+            </ul>
+        </div>
+        <!--mobile-->
+        <div class="withNeedINmobile ">
+            <div class="withNeedINmobileBtn pointer">
+                <strong>사업자 정보</strong>
+                <div class="arrow-down"></div>
+            </div>
+            <div class="withNeedINmobileList">
+                <ul>
+                    <li>대표이사<span>김대환</span><span>서울 중구 세종대로 67 (04514)</span></li>
+                    <li>사업자등록번호<span>202-81-45602</span></li>
+                    <li>통신판매업 신고번호<span>제 2009-서울중구-1449호</span></li>
+                    <li>© SAMSUNG CARD CO., LTD. All rights reserved.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="snsInMobile">
+            <ul class="sns">
+                <li>
+                    <a href="#">instagram</a>
+                </li>
+                <li>
+                    <a href="#">facebook</a>
+                </li>
+                <li>
+                    <a href="#">youtube</a>
+                </li>
+                <li>
+                    <a href="#">kakao</a>
+                </li>
+                <li>
+                    <a href="#">blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="familysite">
+            <div class="btn-group dropup">
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                        aria-expanded="false">
+                    패밀리사이트
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">쇼핑</a>
+                    <a class="dropdown-item" href="#">여행</a>
+                    <a class="dropdown-item" href="#">웨딩</a>
+                    <a class="dropdown-item" href="#">보험</a>
+                    <a class="dropdown-item" href="#">아지냥이</a>
+                    <a class="dropdown-item" href="#">열린나눔</a>
+                    <a class="dropdown-item" href="#">Young Lab</a>
+                    <a class="dropdown-item" href="#">U포인트</a>
+                    <a class="dropdown-item" href="#">삼성카드고객서비스</a>
+                </div>
+            </div>
+        </div>
+        <div class="footerLogo">
+            <img src="img/img-footer-logo.png" alt="samsung logo">
+        </div>
+        <div class="award">
+            <ul>
+                <li>
+                    <div>
+                    <img src="img/img-awards03.png" alt="">
+                    </div>
+                    <div>
+                        <span>
+                            국가고객 만족도
+                        </span>
+                        <span>
+                        10년 연속 1위
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/img-awards04.png" alt="">
+                    <div>
+                        <span>
+                            한국서비스대상
+                        </span>
+                        <span>
+                        명예의 전당
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/img-awards05.png" alt="">
+                    <span>
+                    고객만족경영대상
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="width">
+            <div id="upBtn">
+                <div class="upImg"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+/* body */
+body {
+    background: #f3f3f8;
+    overflow-y: scroll;
+}
+
+#wrapper{
+    height: unset;
+}
+
+header {
+    position: relative;
+    background: white;
+    max-width: unset;
+}
+
+section {
+    /*position: relative;*/
+    width: 100%;
+    max-width: 1022px;
+}
+
+/*productNav*/
+.productNav {
+    background: transparent;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 180px;
+    padding: 60px 0;
+    /*max-width: 960px;*/
+}
+
+.productNav ul {
+    background: #ffffff;
+    width: 100%;
+    height: 60px;
+    border-radius: 13px;
+    box-shadow: 0 2px 8px rgba(102, 102, 102, .16);
+}
+
+.productNav ul li {
+    width: 16.6666%;
+    line-height: 60px;
+}
+
+.productNav ul li:hover a, .navActive{
+    color: #2e81f8 !important;
+}
+
+.productNav ul li a {
+    font-weight: normal;
+    font-size: 16px;
+    color: #303030;
+}
+
+h3 {
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+/*dropdown*/
+.selectDropdown {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 40px;
+
+}
+
+.whiteBtn {
+    background: white;
+    border-radius: 30px;
+    width: 160px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.whiteBtn span {
+    width: 80px;
+    display: block;
+}
+
+/* dropdown toggle btn */
+.dropdown-toggle::after {
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon-common.png") no-repeat;
+    background-size: 120px 20px;
+    border: 0;
+    transform: rotate(90deg);
+}
+
+.selectDropdown .dropdown-menu {
+    border-radius: 0;
+    border: 1px solid #2e81f8;
+    background: #f2f6fa;
+}
+
+.selectDropdown .dropdown-menu {
+    width: 160px;
+    margin: 0;
+}
+
+.btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show > .btn-light.dropdown-toggle {
+    background: white;
+    border: none;
+}
+
+.btn-light.focus, .btn-light:focus {
+    box-shadow: unset;
+}
+
+.selectDropdown .dropdown-menu li:hover li.active {
+    /*background: #e5eef8;*/
+    background: red;
+}
+
+/* --------------------카드 섹션------------------------- */
+.cardSection {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cardSection .cardSection-item-list {
+    background: white;
+    width: 470px;
+    height: 230px;
+    border-radius: 12px;
+    padding: 28px;
+    gap: 12px;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+    float: left;
+}
+
+.cardSection .cardSection-item-list ul {
+    width: 100%;
+    height: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.cardSection .cardSection-item-list img {
+    font-weight: unset;
+    margin-bottom: 15px;
+}
+
+.cardSection .cardSection-item-list ul li:not(:first-child) {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardSection .cardSection-item-list ul li:first-child {
+}
+
+/* hover */
+.cardSection .cardSection-item-list:hover{
+    transform: translatey(-3%);
+    transition: 0.3s linear;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+}
+
+
+/* filtering */
+.cardSection-item-list {
+    display: none;
+}
+
+.dp-unset {
+    display: unset;
+}
+
+
+/* modal style */
+.modal{
+    top: 30%;
+}
+.modal-header, .modal-footer{
+    border: none;
+}
+
+.modal-footer{
+    justify-content: center;
+}
+
+.modal-footer button{
+    width: 150px;
+    cursor:pointer;
+    z-index: 1041;
+}
+
+
+/*********************************************/
+/*                  미디어쿼리                 */
+/*********************************************/
+/*1) window tab size : 1274 | <wrapper white section 80% under>*/
+@media screen and (max-width: 1274px) {
+    /*.cardSection {*/
+    /*    justify-content: space-between;*/
+    /*}*/
+
+    .cardSection .cardSection-item-list {
+        width: 100%;
+    }
+    .cardSection .cardSection-item-list img {
+        margin-bottom: 10px;
+    }
+}
+
+/*2) mobile 환경 | 디바이스 장치가 최소 767px일 때*/
+@media screen and (max-width: 767px) {
+    /*nav*/
+    header {
+        position: sticky;
+    }
+
+    section, .selectDropdown {
+        margin-top: 40px;
+    }
+
+    .mobileBr {
+        display: unset;
+    }
+
+    nav.productNav {
+        display: unset !important;
+        position: relative;
+        height: 100%;
+    }
+
+    section div:nth-of-type(1) h3 {
+        display: none;
+    }
+
+    .productNav ul li a {
+        font-size: 13px;
+    }
+
+    .cardSection .cardSection-item-list {
+        width: 100%;
+        height: 181px;
+    }
+
+    .cardSection .cardSection-item-list ul {
+        height: 90px;
+        gap: unset;
+    }
+}

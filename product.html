@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>상품 목록 - 샘송카드 다이렉트 보험</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="//static12.samsungcard.com/images/insurance/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!--css file link-->
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/product.css"/>
+
+    <!--제이쿼리-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="shadowWrap"></div>
+<div id="wrapper">
+    <header>
+        <nav>
+            <!--메인 화면에서 보이는 메뉴-->
+            <div id="main-menu">
+                <!--nav 최상단 영역 | 홈페이지 / 로그인-->
+                <div class="headerTop">
+                    <span><a href="#">삼성카드 홈페이지</a></span>
+                    <span><a href="#">로그인</a></span>
+                </div>
+                <!--main nav-->
+                <div class="headerBot">
+                    <h2 id="logo"><a href="index.html"></a></h2>
+                    <ul class="main">
+                        <li><a href="product.html">상품</a></li>
+                        <li><a href="event.html">이벤트</a></li>
+                        <li><a href="counsel.html">상담예약</a></li>
+                    </ul>
+                    <div class="navR">
+                        <button type="button" class="btn-search"></button>
+                        <button type="button" class="btn-close"></button>
+                        <button type="button" class="btn-menu "></button>
+                        <button type="button" class="btn-close"></button>
+                    </div>
+                </div>
+            </div>
+            <!--메뉴 버튼 클릭 시 보이는 네비-->
+            <div class="nav-menu">
+                <ul>
+                    <li class="menu-top">카테고리</li>
+                    <li class="show1"><a href="#">자동차</a></li>
+                    <li class="show2"><a href="#">기타</a></li>
+                    <li class="show3"><a href="#">암·건강</a></li>
+                    <li class="show4"><a href="#">이륜차·운전자</a></li>
+                    <li class="show5"><a href="#">여행·레저</a></li>
+                </ul>
+                <ul>
+                    <li class="menu-top">상품 모아보기</li>
+                    <li><a href="#">인기순위</a></li>
+                    <li><a href="#">신규상품</a></li>
+                    <li><a href="#">보험사별</a></li>
+                    <li><a href="#">전체보기</a></li>
+                </ul>
+                <ul>
+                    <li class="menu-top">혜택</li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">보험상담</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--mobile nav-->
+    <nav class="mobileNav">
+        <div>
+            <button type="button" class="btn-menu hamburger"></button>
+            <!--M nav 클릭 전 숨겨질 영역-->
+            <div class="mobileNavList">
+                <div>
+                    <h2 class="logo"><a href="index.html"></a></h2>
+                    <button type="button" class="btn-close"></button>
+                </div>
+                <ul>
+                    <li class="menu-top">
+                        <span>카테고리</span>
+                        <div class="arrow-down"></div>
+                    </li>
+                    <li class="show1"><a href="#">자동차</a></li>
+                    <li class="show2"><a href="#">기타</a></li>
+                    <li class="show3"><a href="#">암·건강</a></li>
+                    <li class="show4"><a href="#">이륜차·운전자</a></li>
+                    <li class="show5"><a href="#">여행·레저</a></li>
+                </ul>
+                <ul>
+                    <li class="menu-top">
+                        상품 모아보기
+                        <div class="arrow-down"></div>
+                    </li>
+                    <li><a href="#">인기순위</a></li>
+                    <li><a href="#">신규상품</a></li>
+                    <li><a href="#">보험사별</a></li>
+                    <li><a href="#">전체보기</a></li>
+                </ul>
+                <ul>
+                    <li class="menu-top">혜택
+                        <div class="arrow-down"></div>
+                    </li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">보험상담</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <section>
+        <nav class="productNav">
+            <ul>
+                <li><a href="#">전체</a></li>
+                <li class="show1"><a href="#">자동차</a></li>
+                <li class="show2"><a href="#">암·건강</a></li>
+                <li class="show3"><a href="#">여행·레저</a></li>
+                <li class="show4"><a href="#">이륜차·운전자</a></li>
+                <li class="show5"><a href="#">기타</a></li>
+            </ul>
+        </nav>
+        <div class="pb-5">
+            <h3>유용한 다이렉트 보험, 간편하게 가입할 수 있어요.</h3>
+        </div>
+        <div class="selectDropdown">
+            <button class="border btn btn-light dropdown-toggle whiteBtn" type="button" data-toggle="dropdown"
+                    aria-expanded="false">
+                <span>선택하세요.</span>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">선택하세요.</a>
+                <a class="dropdown-item" href="#">보험사별</a>
+                <a class="dropdown-item" href="#">이벤트별</a>
+                <a class="dropdown-item" href="#">인기상품순</a>
+                <a class="dropdown-item" href="#">신규상품순</a>
+            </div>
+        </div>
+        <div class="cardSection mb-5">
+            <div class="cardSection-item-list health">
+                <img src="./img/pd-logo-aia.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">무배당 AIA 치과비 걱정없는 치아보험(갱신형)</h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        보장은 동일하게, 15년 동안 처음 보험료 그대로!
+                    </li>
+                    <li class="text-muted font13">
+                        [준법감시인 확인필 2023-05-0020(2023-05-08~2024-05-07)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list health">
+                <img src="./img/pd-logo-aia.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            (무)AIA 첫날부터 입원비 보험(갱신형)
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        입원비 걱정을 첫날부터 덜어주는 보험
+                    </li>
+                    <li class="text-muted font13">
+                        준법감시인 심의필 COM-2023-11-0071 (2023-11-21~2024-11-20)
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list health">
+                <img src="./img/pd-logo-aig.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            (무)AIG 다이렉트 입원비집중보장보험
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        손해보험협회 심의필 제 110909호 (2023.11.17)
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list health">
+                <img src="./img/pd-logo-aia.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            AIA 용종 뚝딱 미니 보험
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        용종 걱정 간편하게 대비하세요!
+                    </li>
+                    <li class="text-muted font13">
+                        준법감시인확인필 2023-05-0056 (2023-05-26~2024-05-25)
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list health">
+                <img src="./img/pd-logo-aia.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            (무)AIA Vitality 든든 튼튼 암보험(갱신형)
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        걷는 만큼 혜택으로 돌려주는 표적항암 미니 보험
+                    </li>
+                    <li class="text-muted font13">
+                        [준법감시인 확인필 2023-03-0044(2023-03-29~2024-03-28)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list health">
+                <img src="./img/pd-logo-aia.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            AIA생명 (무) AIA 100세 든든 슈퍼 암보험 (갱신형)
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        초회보험료 결제 시 1만원 당 1만원 이마트상품권 모바일교환권 혜택(최대 3만원)
+                    </li>
+                    <li class="text-muted font13">
+                        [AIA 생명보험 준법감시인 심의필 제 COM-2023-07-0023 (2023-07-12~2024-07-11)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list health">
+                <img src="./img/pd-logo-aia.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            AIA생명 (무) 아파도 카드값 걱정없는 건강보험
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        [AIA 생명보험 준법감시인 심의필 제 COM-2023-08-0027 (2023-08-24~2024-08-23)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list health">
+                <img src="./img/pd-logo-samsung.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            삼성화재 다이렉트 Smart 맞춤보장보험
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        월 보험료 1만원 이상 결제 시 1만원 이마트상품권 모바일 교환권 혜택
+                    </li>
+                    <li class="text-muted font13">
+                        [손해보험협회 심의필 제84195호(2023.04.12~2024.04.11)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list health">
+                <img src="./img/pd-logo-mirae.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            미래에셋생명 온라인 비흡연 딱딱 치아보험(갱신형)
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        [생명보험협회심의필제2023-01440호(2023.04.04~2024.04.03)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list health">
+                <img src="./img/pd-logo-aia.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            미래에셋생명 온라인 뇌심보장보험
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        [생명보험협회심의필제2023-01440호(2023.04.04~2024.04.03)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list car">
+                <img src="./img/pd-logo-db.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            DB손해보험 다이렉트 자동차보험
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        보험료 30만원 이상 결제 시 최대 3만원 신세계상품권 혜택!
+                    </li>
+                    <li class="text-muted font13">
+                        [손해보험협회 심의필 제83260호 (2023.03.27)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list car">
+                <img src="./img/pd-logo-hd.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            현대해상 다이렉트 자동차보험
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        보험료 30만원 이상 결제 시 3만원 신세계상품권 혜택!
+                    </li>
+                    <li class="text-muted font13">
+                        [손해보험협회 심의필 제109607호(2023.11.06)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list car">
+                <img src="./img/pd-logo-aia.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            KB손해보험 다이렉트 자동차보험
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        보험료 30만원 이상 결제 시 최대 3만원 신세계상품권 혜택!
+                    </li>
+                    <li class="text-muted font13">
+                        [손해보험협회 심의필 제86624호 (2023.05.24~2024.05.23)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list car">
+                <img src="./img/pd-logo-carrot.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            캐롯 퍼마일자동차보험
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        보험료 30만원 이상 결제 시 최대 3만원 모바일상품권 혜택!
+                    </li>
+                    <li class="text-muted font13">
+                        [심의필-캐롯-제2023-203255-자체(2023.05.11~2024.05.10)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list travel">
+                <img src="./img/pd-logo-samsung.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            삼성화재 다이렉트 해외여행보험
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        인터넷으로 41.7% 저렴하게 가입하세요! (자사 오프라인 대비)
+                    </li>
+                    <li class="text-muted font13">
+                        손해보험협회 심의필 제84067호(2023.04.10~2024.04.09)
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list travel">
+                <img src="./img/pd-logo-chubb.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            에이스손해보험 Chubb 해외여행보험
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        [준법감시인 심의필 OTA-2023-027 (2023.09.05~2024.09.04
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list travel">
+                <img src="./img/pd-logo-chubb.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            에이스손해보험 Chubb 국내여행보험
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        [준법감시인 심의필 OTA-2023-027 (2023.09.05~2024.09.04)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list driver">
+                <img src="./img/pd-logo-db.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            DB손해보험 다이렉트 이륜차보험
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        [손해보험협회 심의필 제85591호 (2023.05.10)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list driver">
+                <img src="./img/pd-logo-kb.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            KB손해보험 다이렉트 이륜차보험
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        자사 오프라인 대비 평균 20.5% 저렴한 합리적인 보험료
+                    </li>
+                    <li class="text-muted font13">
+                        [손해보험협회 심의필 제86623호(2023.05.24~2024.05.23)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list driver">
+                <img src="./img/pd-logo-kb.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            KB손해보험 다이렉트 운전자보험
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        [KB손해보험 준법감시인 심의필 제2023-1127호]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list driver">
+                <img src="./img/pd-logo-samsung.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            삼성화재 다이렉트 운전자보험
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        월 보험료 1만원 이상 결제 시 1만원 이마트상품권 모바일 교환권 제공
+                    </li>
+                    <li class="text-muted font13">
+                        [손해보험협회 심의필 제84194호(2023.04.12~2024.04.11)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list etc">
+                <img src="./img/pd-logo-samsung.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            삼성화재 다이렉트 펫보험(반려견/반려묘)
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        [손해보험협회 심의필 제84200호(2023.04.12~2024.04.11)]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list etc">
+                <img src="./img/pd-logo-meritz.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            메리츠화재 펫보험
+                        </h5>
+                    </li>
+                    <li class="gg-text-blue">
+                        월 보험료 3만원 이상, 2회차 납입시 최대 3만원 신세계상품권 혜택!
+                    </li>
+                    <li class="text-muted font13">
+                        손해보험협회 심의필 제102078호(2023.07.12~2024.07.11)
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list etc">
+                <img src="./img/pd-logo-samsung.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            삼성화재 다이렉트 사업장화재보험
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        손해보험협회 심의필 제84199호(2023.04.12~2024.04.11)
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list etc">
+                <img src="./img/pd-logo-kb.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            KB손해보험 다이렉트 주택화재보험
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        [KB손해보험 준법감시인 심의필 제2023-1127호]
+                    </li>
+                </ul>
+            </div>
+            <div class="cardSection-item-list etc">
+                <img src="./img/pd-logo-samsung.png" class="img-h24" alt="">
+                <ul>
+                    <li>
+                        <h5 class="font-weight-bold">
+                            삼성화재 다이렉트 주택화재보험
+                        </h5>
+                    </li>
+                    <li class="text-muted font13">
+                        [손해보험협회 심의필 제84198호(2023.04.12~2024.04.11)]
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+             aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body text-center m-4">
+                        모바일 환경에서만 가입 가능한 보험 상품입니다.
+                    </div>
+                    <div class="modal-footer p-0 m-0 mb-3">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="realFooter">
+            <div class="footerTop">
+                <ul class="tel">
+                    <li>
+                        대표전화
+                        <span>1588-8700</span>
+                    </li>
+                    <li>
+                        카드신청
+                        <span>1688-1133</span>
+                    </li>
+                    <li>
+                        보험상품 모집 수수료율
+                    </li>
+                </ul>
+                <hr>
+                <ul class="sns">
+                    <li>
+                        <a href="#">instagram</a>
+                    </li>
+                    <li>
+                        <a href="#">facebook</a>
+                    </li>
+                    <li>
+                        <a href="#">youtube</a>
+                    </li>
+                    <li>
+                        <a href="#">kakao</a>
+                    </li>
+                    <li>
+                        <a href="#">blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footerBot">
+                <ul>
+                    <li>
+                        <strong>회사소개</strong>
+                    </li>
+                    <li>이용약관</li>
+                    <li>
+                        <strong>개인정보처리방침</strong>
+                    </li>
+                </ul>
+                <ul>
+                    <li>사업자정보확인</li>
+                    <li>손해보험 보험대리점등록증</li>
+                    <li>생명보험 보험대리점등록증</li>
+                </ul>
+            </div>
+            <div class="withNeed">
+                <ul>
+                    <li>대표이사</li>
+                    <li><span>김대환</span></li>
+                    <li><span>서울 중구 세종대로 67 (04514)</span></li>
+                    <li>사업자등록번호</li>
+                    <li><span>202-81-45602</span></li>
+                    <li>통신판매업 신고번호</li>
+                    <li><span>제 2009-서울중구-1449호</span></li>
+                    <li>© SAMSUNG CARD CO., LTD. All rights reserved.</li>
+                    <li>삼성카드는 보험업법 제87조에 따라 금융위원회에 등록된 금융기관 보험대리점입니다.</li>
+                </ul>
+            </div>
+            <!--mobile-->
+            <div class="withNeedINmobile ">
+                <div class="withNeedINmobileBtn pointer">
+                    <strong>사업자 정보</strong>
+                    <div class="arrow-down"></div>
+                </div>
+                <div class="withNeedINmobileList">
+                    <ul>
+                        <li>대표이사<span>김대환</span><span>서울 중구 세종대로 67 (04514)</span></li>
+                        <li>사업자등록번호<span>202-81-45602</span></li>
+                        <li>통신판매업 신고번호<span>제 2009-서울중구-1449호</span></li>
+                        <li>© SAMSUNG CARD CO., LTD. All rights reserved.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="snsInMobile">
+                <ul class="sns">
+                    <li>
+                        <a href="#">instagram</a>
+                    </li>
+                    <li>
+                        <a href="#">facebook</a>
+                    </li>
+                    <li>
+                        <a href="#">youtube</a>
+                    </li>
+                    <li>
+                        <a href="#">kakao</a>
+                    </li>
+                    <li>
+                        <a href="#">blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="familysite">
+                <div class="btn-group dropup">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                            aria-expanded="false">
+                        패밀리사이트
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">쇼핑</a>
+                        <a class="dropdown-item" href="#">여행</a>
+                        <a class="dropdown-item" href="#">웨딩</a>
+                        <a class="dropdown-item" href="#">보험</a>
+                        <a class="dropdown-item" href="#">아지냥이</a>
+                        <a class="dropdown-item" href="#">열린나눔</a>
+                        <a class="dropdown-item" href="#">Young Lab</a>
+                        <a class="dropdown-item" href="#">U포인트</a>
+                        <a class="dropdown-item" href="#">삼성카드고객서비스</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerLogo">
+                <img src="img/img-footer-logo.png" alt="samsung logo">
+            </div>
+            <div class="award">
+                <ul>
+                    <li>
+                        <img src="img/img-awards03.png" alt="">
+                        <div>
+                            <span>
+                                국가고객 만족도
+                            </span>
+                            <span>
+                                10년 연속 1위
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/img-awards04.png" alt="">
+                        <div>
+                            <span>
+                                한국서비스대상
+                            </span>
+                            <span>
+                            명예의 전당
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/img-awards05.png" alt="">
+                        <span>
+                            고객만족경영대상
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="width">
+                <div id="upBtn">
+                    <div class="upImg"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+<script src="js/myScript.js"></script>
+<script>
+    /* CARD section */
+    $(function () {
+        let cardSection = $(".cardSection-item-list");
+        let car = $(".car");
+        let health = $(".health");
+        let travel = $(".travel");
+        let driver = $(".driver");
+        let etc = $(".etc");
+        let ProductNavList1 = $(".show1");
+        let ProductNavList2 = $(".show2");
+        let ProductNavList3 = $(".show3");
+        let ProductNavList4 = $(".show4");
+        let ProductNavList5 = $(".show5");
+        let ProductNavList = $(".productNav ul li");
+        let ProductNavListA = $(".productNav ul li a");
+        let navMenu = $(".nav-menu ul li");
+        let i = $(this).index();
+
+        cardSection.show();
+        ProductNavList.eq(i).toggleClass("gg-text-blue");
+
+        ProductNavList.eq(0).click(function () {
+            cardSection.show();
+        })
+
+        navMenu.click(function () {
+            location.reload(true);
+        })
+
+        ProductNavList1.click(function () {
+            car.show();
+            health.hide();
+            travel.hide();
+            driver.hide();
+            etc.hide();
+        })
+
+        ProductNavList2.click(function () {
+            car.hide();
+            health.show();
+            travel.hide();
+            driver.hide();
+            etc.hide();
+        })
+
+        ProductNavList3.click(function () {
+            car.hide();
+            health.hide();
+            travel.show();
+            driver.hide();
+            etc.hide();
+        })
+
+        ProductNavList4.click(function () {
+            car.hide();
+            health.hide();
+            travel.hide();
+            driver.show();
+            etc.hide();
+        })
+
+        ProductNavList5.click(function () {
+            car.hide();
+            health.hide();
+            travel.hide();
+            driver.hide();
+            etc.show();
+        })
+
+        ProductNavList.click(function () {
+            this.addClass("color", "red");
+            alert("ProductNavListA");
+        })
+
+        /*withNeedINmobileBtn*/
+        let withNeedINmobileBtn = $(".withNeedINmobileBtn");
+        let withNeedINmobileArrow = $(".arrow-down");
+        let withNeedINmobileList = $(".withNeedINmobileList");
+
+        withNeedINmobileList.hide();
+
+        withNeedINmobileBtn.click(function () {
+            withNeedINmobileList.toggle();
+            withNeedINmobileArrow.toggleClass("arrow-active");
+        });
+
+        /* up btn */
+        let upBtn = $(".width #upBtn");
+
+        upBtn.click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 200)
+            return false;
+        });
+
+        /*modal*/
+        cardSection.click(function () {
+            $('#myModal').modal('show')
+        })
+
+    })
+</script>
+</body>
+</html>

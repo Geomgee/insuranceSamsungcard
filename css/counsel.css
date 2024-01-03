@@ -1,0 +1,88 @@
+.subCounsel {
+	width: 486px;
+	height: 160px;
+	margin: 0 auto;
+	background: white;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
+	padding: 30px;
+}
+
+.subCounsel div {
+	align-self: center;
+}
+
+.subCounsel div span:last-child{
+	color: #595959;
+	font-size: 13px;
+}
+
+.subCounsel img {
+	align-self: center;
+	width: 166px;
+	height: 82px;
+}
+
+.cardParent{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.card{
+	width: 47%;
+	padding: 25px 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
+	float: left;
+}
+
+.card img{
+	width: 64px;
+	height: 64px;
+}
+
+.card strong{
+	font-size: 19px;
+}
+
+.card .btn{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card input[type=button] {
+	background: white;
+	border: 1px solid #2b2e38;
+	padding: 5px 10px;
+	border-radius: 3px;
+	width: 48%;
+	font-size: 13px;
+}
+
+.card input[type=button]:nth-of-type(2) {
+	border: 1px solid #2e81f8;
+	color: #2e81f8;
+}
+
+
+/*********************************************/
+/*                  미디어쿼리                 */
+/*********************************************/
+/*1) window tab size : 1274 | <wrapper white section 80% under>*/
+@media screen and (max-width: 1274px) {
+	.subCounsel {
+		width: 100%;
+	}
+	
+}

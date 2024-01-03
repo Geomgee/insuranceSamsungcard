@@ -1,0 +1,75 @@
+/* section */
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.txtBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 157px;
+}
+
+
+/* section */
+.eventBoxParent{
+    max-width: 968px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.eventBox{
+    background: white;
+    padding: 2px;
+    border: 1px solid #d3d5da;
+}
+
+.eventBox ul{
+    width: 300px;
+    height: 110px;
+    padding: 13px 24px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.eventBox ul li{
+    width: 100%;
+}
+
+/*********************************************/
+/*                  미디어쿼리                 */
+/*********************************************/
+/*1) window tab size : 1274 | <wrapper white section 80% under>*/
+@media screen and (max-width: 1274px) {
+    .eventBox{
+        border: none;
+        width: 100%;
+        display: flex;
+        border-radius: 5px;
+        padding: unset;
+    }
+
+    .eventBox ul li div:first-child{
+        width: 38%;
+    }
+
+    .eventBox ul{
+        width: 100%;
+    }
+
+    .eventBox img{
+        border-radius: 5px 0 0 5px;
+        height: 100%;
+        width: 100%;
+    }
+
+}

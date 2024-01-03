@@ -1,0 +1,22 @@
+/* body */
+body{
+    background: #f3f3f8;
+    overflow-y: scroll;
+}
+header{
+    background: white;
+}
+
+section{
+    padding: 0 25px;
+}
+
+/*****************************************************************/
+/*                          미디어 쿼리                            */
+/*****************************************************************/
+/*1) window tab size : 1274 | <wrapper white section 80% under>*/
+@media screen and (max-width: 1274px) {
+    section{
+        margin: 25px 0;
+    }
+}
