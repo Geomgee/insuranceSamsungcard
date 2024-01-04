@@ -27,10 +27,17 @@ section {
     display: flex;
     justify-content: center;
     text-align: center;
+    width: 100%;
     height: 180px;
     padding: 60px 0;
     /*max-width: 960px;*/
+    transition: top 0.2s ease-in-out;
 }
+
+/*스크롤*/
+/*div.aos-init.aos-animate{
+    width: 100%;
+}*/
 
 .productNav ul {
     background: #ffffff;
@@ -234,10 +241,6 @@ h3 {
 
     section, .selectDropdown {
         margin-top: 40px;
-    }
-
-    .mobileBr {
-        display: unset;
     }
 
     nav.productNav {

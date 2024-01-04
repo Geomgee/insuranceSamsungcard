@@ -219,7 +219,6 @@ nav ul {
     margin: 0 0 30px 0;
 }
 
-
 /*밑선*/
 .menu-top::after {
     content: "";
@@ -295,6 +294,7 @@ nav ul {
     background: white;
     top: 0;
     right: 0;
+    display: none;
 }
 
 .mobileNav>div, .mobileNavList, .mobileNavList>div{
@@ -314,7 +314,6 @@ nav ul {
 .mobileNavList ul:nth-of-type(1){
     margin-top: 50px;
 }
-
 
 .mobileNavList ul li{
     /*border: 1px solid aqua;*/
@@ -477,7 +476,6 @@ footer {
     padding: 0;
     width: 100%;
     /*height: 371px;*/
-    margin-top: 16px;
     font-family: 'SpoqaHanSansNeo-Regular', serif;
     background-color: #F9FAFC;
     position: relative;
@@ -683,6 +681,10 @@ footer .tel li span {
     border-radius: 12px;
 }
 
+button.btn.dropdown-toggle{
+    padding-left: 20px;
+}
+
 .dropdown-menu {
     width: 100%;
     position: absolute;
@@ -743,6 +745,7 @@ footer .tel li span {
 
 .withNeedINmobile ul li {
     padding: 0px;
+    color: #666666;
 }
 
 .withNeedINmobile ul li:last-child {
@@ -846,6 +849,11 @@ footer .tel li span {
     }
 
     /*mobile nav*/
+    .mobileNav {
+        display: unset;
+    }
+
+
     .hamburger{
         display: unset;
     }

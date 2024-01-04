@@ -1,3 +1,9 @@
+section{
+	max-width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+
 .subCounsel {
 	width: 486px;
 	height: 160px;
@@ -5,7 +11,7 @@
 	background: white;
 	border-radius: 10px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
 	padding: 30px;
 }
@@ -17,12 +23,24 @@
 .subCounsel div span:last-child{
 	color: #595959;
 	font-size: 13px;
+	display: block;
 }
 
 .subCounsel img {
 	align-self: center;
 	width: 166px;
 	height: 82px;
+	margin-left: 15px;
+}
+
+/* mainCounsel : 어떤 보험 상품을 상담해 드릴까요? */
+.mainCounsel{
+	text-align: center;
+	height: 100%;
+}
+
+.mainCounsel h3{
+	margin: 20px 0;
 }
 
 .cardParent{
@@ -34,16 +52,23 @@
 }
 
 .card{
-	width: 47%;
+	width: 48%;
 	padding: 25px 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 20px;
 	border: none;
 	border-radius: 10px;
 	box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
 	float: left;
+	gap: 20px;
+}
+
+.card .cardText{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .card img{
@@ -53,9 +78,11 @@
 
 .card strong{
 	font-size: 19px;
+	text-align: center;
+	display: block;
 }
 
-.card .btn{
+.card .btnGroup{
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -63,7 +90,8 @@
 
 .card input[type=button] {
 	background: white;
-	border: 1px solid #2b2e38;
+	border: 1px solid #bec2c7;
+	color: #2b2e38;
 	padding: 5px 10px;
 	border-radius: 3px;
 	width: 48%;
@@ -75,14 +103,138 @@
 	color: #2e81f8;
 }
 
+/*notice*/
+.notice{
+	color: #303030;
+	margin-left: 25px;
+}
+
+/*notice ico*/
+.noticeIco{
+	content: "";
+	display: inline-block;
+	position: relative;
+	top: -1px;
+	left: 0;
+	margin: 0 5px 0 -16px;
+	width: 14px;
+	height: 14px;
+	background: url(/img/icon_element.png) no-repeat -170px -40px;
+	vertical-align: middle;
+}
+
+
+/* 꼭 알아야 할 사항 mustKnow */
+.mustKnow{
+	background: white;
+	text-align: center;
+	max-width: unset;
+	padding-bottom: 60px;
+}
+
+.mustKnowContent{
+	max-width: 960px;
+	padding: 0 25px;
+	margin: 0 auto;
+	color: #101010;
+}
+
+.mustKnow h3{
+	display: block;
+	padding: 50px;
+	margin: 0;
+	font-weight: bold;
+}
+
+.mustKnow ul li{
+	list-style: "· ";
+	font-size: 18px;
+}
 
 /*********************************************/
 /*                  미디어쿼리                 */
 /*********************************************/
 /*1) window tab size : 1274 | <wrapper white section 80% under>*/
 @media screen and (max-width: 1274px) {
+
+
+}
+/* ---------------- 중간 ---------------- */
+@media screen and (max-width: 1024px) {
+	section{
+		text-align: left;
+	}
+
+	/* 상단 sub counsel */
 	.subCounsel {
 		width: 100%;
 	}
-	
+
+	.mainCounsel{
+		text-align: left;
+	}
+
+	/*mainCounsel*/
+	.mainCounsel h3{
+		font-size: 18px;
+		letter-spacing: -0.5px;
+	}
+
+	/*card section*/
+	.card {
+		width: 100%;
+		align-items: flex-start;
+		padding: 23px 20px;
+	}
+
+	.card img{
+		position: absolute;
+		width: 32px;
+		height: 32px;
+		margin-bottom: 53px;
+	}
+
+	.cardText {
+		padding-left: 50px;
+	}
+
+	.card strong {
+		font-size: 15px;
+		text-align: left;
+		display: block;
+	}
+
+	.btnGroup{
+		padding: 0;
+	}
+
+	.card input[type=button] {
+		width: 49%;
+	}
+
+	/*notice*/
+	.notice{
+		font-size: 13px;
+	}
+
+
+	/* 꼭 알아두실 사항 section */
+	.mustKnowContent{
+		text-align: left;
+	}
+
+	.mustKnowContent h3{
+		padding-left: 0;
+		font-size: 18px;
+	}
+
+	.mustKnow ul li{
+		font-size: 14px;
+	}
+
+}
+
+
+/*2) mobile 환경 | 디바이스 장치가 최소 767px일 때*/
+@media screen and (max-width: 767px) {
 }

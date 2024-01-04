@@ -5,6 +5,10 @@ section {
     margin: 0 auto;
 }
 
+footer{
+    margin-top: 16px;
+}
+
 /**********/
 /*carousel*/
 section#carousel {
