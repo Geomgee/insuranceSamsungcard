@@ -680,3 +680,10 @@ hr.c-g {
         height: 120%;
     }
 }
+
+/* 더 작은 모바일 화면 */
+@media screen and (max-width: 450px) {
+    .event ul li img {
+        width: 100%;
+    }
+}

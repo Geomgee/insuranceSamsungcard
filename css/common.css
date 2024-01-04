@@ -937,10 +937,12 @@ button.btn.dropdown-toggle{
     .award ul{
         padding-top: 66px;
     }
+
     .award img{
         width: 36px;
         height: 36px;
     }
+
     .award ul li span {
         line-height: 25px;
     }
