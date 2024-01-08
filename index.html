@@ -30,6 +30,9 @@
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
+    <!--scrollOut-->
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
 </head>
 <body>
 <div class="shadowWrap"></div>
@@ -146,7 +149,7 @@
     <!--메인 컨텐츠-2-->
     <section id="content-area">
         <!--알아두면 힘이되는-->
-        <div class="know">
+        <div class="know" data-scroll>
             <h5>알아두면 힘이 되는</h5>
             <div class="manImg"></div>
             <div class="box">
@@ -169,7 +172,7 @@
             </div>
         </div>
         <!--꼭 필요한-->
-        <div class="need">
+        <div class="need" data-scroll>
             <h5>꼭 필요한</h5>
             <ul>
                 <li>
@@ -187,7 +190,7 @@
             </ul>
         </div>
         <!--이벤트-->
-        <div class="event">
+        <div class="event" data-scroll>
             <h5>이벤트</h5>
             <ul class="scroll-box">
                 <li>
@@ -453,6 +456,12 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
 <script src="js/myScript.js"></script>
+
+<script>
+    $(function () {
+        ScrollOut();
+    })
+</script>
 
 </body>
 </html>
