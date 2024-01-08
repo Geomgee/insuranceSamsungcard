@@ -49,7 +49,7 @@ a, button, a:hover {
     margin: 0 auto;
 }
 
-nav, section, .realFooter {
+nav, .realFooter {
     max-width: 1225px;
     padding: 0 25px;
     margin: 0 auto;

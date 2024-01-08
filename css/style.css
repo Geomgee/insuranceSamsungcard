@@ -159,7 +159,8 @@ ol.carousel-indicators li.active {
 }
 
 #content-area .know {
-    width: 808px;
+    /*width: 808px;*/
+    width: 65%;
     height: 250px;
     float: left;
     display: flex;
@@ -167,7 +168,8 @@ ol.carousel-indicators li.active {
 }
 
 #content-area .need {
-    width: 392px;
+    width: 28%;
+    /*width: 392px;*/
     height: 250px;
     display: flex;
     flex-direction: column;
@@ -175,12 +177,14 @@ ol.carousel-indicators li.active {
 
 #content-area .event {
     position: relative;
-    width: 808px;
+    /*width: 808px;*/
+    width: 65%;
     height: 322px;
 }
 
 #content-area .counsel {
-    width: 392px;
+    width: 28%;
+    /*width: 392px;*/
     /*height: 322px;*/
     gap: 17px;
     display: flex;
@@ -469,6 +473,7 @@ hr.c-g {
     #wrapper #content-area > div {
         width: 100%;
     }
+    
 
     .event img {
         width: 100%;
