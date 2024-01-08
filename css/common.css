@@ -186,8 +186,11 @@ nav ul {
 }
 
 .btn-close {
-    display: none;
     background-position: -60px 0;
+}
+
+.navR .btn-close {
+    display: none;
 }
 
 /*nav-menu*/
@@ -808,6 +811,126 @@ button.btn.dropdown-toggle{
 .withNeed ul li:nth-of-type(8) {
     padding-right: 20px;
     clear: both;
+}
+
+/***********************************************************/
+/*login modal*/
+.loginModal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4444;
+    padding-top: 200px;
+    font-size: 14px;
+    
+    /*blur 효과*/
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+}
+
+.loginBox {
+    width: 450px;
+    padding: 50px;
+    margin: 0 auto;
+    /*border: 1px solid #dcdcdc;*/
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+    /*blur 효과*/
+    /*background: white;*/
+    /*box-shadow: 0 4px 12px rgb(0 0 0 / 20%);*/
+    background: rgba( 255, 255, 255, 0.9 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+}
+
+.loginBox .loginHeader{
+    width: 100%;
+    margin-top: -10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*login form*/
+.loginBox form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.loginBox input {
+    top: 45px;
+    border-radius: 10px;
+    width: 350px;
+    height: 53px;
+    padding: 0 25px;
+    border: 1px solid #dcdcdc;
+    font-family: 'SpoqaHanSansNeo-Regular', serif;
+    font-weight: normal;
+}
+
+.loginBox input::placeholder {
+    color: #dcdcdc;
+}
+
+.loginBox input[type=submit] {
+    background: #2090FF;
+    border: none;
+    color: white;
+}
+
+.loginBox input:hover, .loginBox input:active {
+    border: 1px solid #2090FF;
+}
+
+.idBtn{
+    position: absolute;
+    margin-top: -38px;
+    right: 50%;
+    margin-right: -120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #888888;
+}
+
+.loginBox input[type=checkbox] {
+    display: none;
+}
+
+.loginBox input[type=checkbox] + label {
+    cursor: pointer;
+    width: 23px;
+    height: 23px;
+    background: url(../img/bg_form_blue_small.png) no-repeat -50px 0;
+    vertical-align: middle;
+}
+.loginBox input[type=checkbox]:checked + label {
+    background: url(../img/bg_form_blue_small.png) no-repeat;
+}
+
+label span{
+    display: block;
+    width: 60px;
+    text-align: right;
+    letter-spacing: -1px;
+    font-size: 16px;
+}
+
+.loginBox form>div:last-child{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 /*****************************************************************/

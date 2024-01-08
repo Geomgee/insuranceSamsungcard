@@ -116,6 +116,31 @@ $(function () {
     });
 
 
-    /* ---------- page : PRODUCT --------- */
+    /* ---------- login 모달 열고 닫기 --------- */
+    let loginBtn = $(".loginBtn");
+    let loginModal = $(".loginModal");
+    let loginBox = $(".loginBox");
+    let logincloseBtn = $(".loginBox .btn-close");
+
+    loginModal.hide();
+    
+    /* 로그인 모달 열기 */
+    loginBtn.click(function(){
+        loginModal.show();
+        $('body').css('overflow', 'hidden');
+    });
+    
+    /* 로그인 모달 닫기 */
+    $(document).mouseup(function(e){
+        if(!loginBox.is(e.target) && loginBox.has(e.target).length === 0){
+            loginModal.hide();
+            $('body').css('overflow', 'auto');
+        }
+    });
+
+    logincloseBtn.click(function(){
+        loginModal.hide();
+        $('body').css('overflow', 'auto');
+    });
 
 });
