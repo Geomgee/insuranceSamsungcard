@@ -15,12 +15,37 @@
 
     <!--제이쿼리-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="shadowWrap"></div>
 <div id="wrapper">
+    <div class="loginModal">
+        <div class="loginBox">
+            <div class="loginHeader">
+                <span>로그인</span>
+                <button type="button" class="btn-close"></button>
+            </div>
+            <form action="login">
+                <div class="inputBox">
+                    <input type="text" id="id" placeholder="아이디 6~12자리 입력">
+                    <div class="idBtn">
+                        <input type="checkbox" name="ck_id" id="ck_id">
+                        <label for="ck_id"><span>저장</span></label>
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <input type="password" id="pw" placeholder="비밀번호 6~20자리 입력">
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="로그인">
+                </div>
+                <div>
+                    <span>아이디 찾기</span>
+                    <span>회원가입</span>
+                </div>
+            </form>
+        </div>
+    </div>
     <header>
         <nav>
             <!--메인 화면에서 보이는 메뉴-->
@@ -704,6 +729,7 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
 <script src="js/myScript.js"></script>
+
 <script>
     /* CARD section */
     $(function () {
@@ -791,21 +817,10 @@
             withNeedINmobileArrow.toggleClass("arrow-active");
         });
 
-        /* up btn */
-        let upBtn = $(".width #upBtn");
-
-        upBtn.click(function () {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 200)
-            return false;
-        });
-
         /*modal*/
         cardSection.click(function () {
             $('#myModal').modal('show')
         })
-
     })
 </script>
 </body>

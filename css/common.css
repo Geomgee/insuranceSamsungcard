@@ -55,6 +55,10 @@ nav, .realFooter {
     margin: 0 auto;
 }
 
+section{
+    margin: 0 auto;
+}
+
 header {
     width: 100%;
     /*border: 1px solid blueviolet;*/
