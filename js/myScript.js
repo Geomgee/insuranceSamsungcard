@@ -1,4 +1,3 @@
-$(function () {
     /*nav 영역*/
     let menuBtn = $(".navR .btn-menu");
     let closeBtn = $(".navR .btn-close");
@@ -144,85 +143,22 @@ $(function () {
     });
 
 
+    function checkLogin(){
+        var form = document.loginForm;
+        let pw = form.pw.value;
 
-    /*--------- product --------*/
-    let cardSection = $(".cardSection-item-list");
-    let car = $(".car");
-    let health = $(".health");
-    let travel = $(".travel");
-    let driver = $(".driver");
-    let etc = $(".etc");
-    let ProductNavList1 = $(".show1");
-    let ProductNavList2 = $(".show2");
-    let ProductNavList3 = $(".show3");
-    let ProductNavList4 = $(".show4");
-    let ProductNavList5 = $(".show5");
-    let ProductNavList = $(".productNav ul li");
-    let ProductNavListA = $(".productNav ul li a");
-    let navMenu = $(".nav-menu ul li");
-    let i = $(this).index();
+        /* 아이디 section */
+        if(!form.id.value){
+            alert("아이디를 입력해주세요");
+            form.id.focus();
+            return false;
+        }
 
-    cardSection.show();
-    ProductNavList.eq(i).toggleClass("gg-text-blue");
+        if(!form.pw.value){
+            alert("패스워드를 입력해주세요");
+            form.id.focus();
+            return false;
+        }
 
-    ProductNavList.eq(0).click(function () {
-        cardSection.show();
-    })
-
-    navMenu.click(function () {
-        location.reload(true);
-    })
-
-    ProductNavList1.click(function () {
-        car.show();
-        health.hide();
-        travel.hide();
-        driver.hide();
-        etc.hide();
-    })
-
-    ProductNavList2.click(function () {
-        car.hide();
-        health.show();
-        travel.hide();
-        driver.hide();
-        etc.hide();
-    })
-
-    ProductNavList3.click(function () {
-        car.hide();
-        health.hide();
-        travel.show();
-        driver.hide();
-        etc.hide();
-    })
-
-    ProductNavList4.click(function () {
-        car.hide();
-        health.hide();
-        travel.hide();
-        driver.show();
-        etc.hide();
-    })
-
-    ProductNavList5.click(function () {
-        car.hide();
-        health.hide();
-        travel.hide();
-        driver.hide();
-        etc.show();
-    })
-
-    ProductNavList.click(function () {
-        this.addClass("color", "red");
-        alert("ProductNavListA");
-    })
-
-    /*modal*/
-    cardSection.click(function () {
-        $('#myModal').modal('show')
-    })
-    /*--------- event page --------*/
-    /*--------- counsel --------*/
-
-});
+        form.submit();
+    }

@@ -887,7 +887,7 @@ button.btn.dropdown-toggle{
     color: #dcdcdc;
 }
 
-.loginBox input[type=submit] {
+.loginBox input[type=button] {
     background: #2090FF;
     border: none;
     color: white;
