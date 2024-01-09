@@ -80,6 +80,11 @@ header {
     font-weight: normal;
 }
 
+.headerTop .loginBtn{
+    font-size: 14px;
+    color: #666666;
+}
+
 /* common style */
 .pointer {
     cursor: pointer;
@@ -247,7 +252,7 @@ nav ul {
 }
 
 /*main nav hover시*/
-.main a:hover, .headerTop a:hover, .nav-menu li a:hover {
+.main a:hover, .headerTop span:hover, .nav-menu li a:hover {
     color: #2e81f8;
 }
 
