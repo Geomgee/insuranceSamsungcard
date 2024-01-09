@@ -141,7 +141,7 @@
     <section>
         <nav class="productNav">
             <ul>
-                <li><a href="#">전체</a></li>
+                <li class="navActive"><a href="#">전체</a></li>
                 <li class="show1"><a href="#">자동차</a></li>
                 <li class="show2"><a href="#">암·건강</a></li>
                 <li class="show3"><a href="#">여행·레저</a></li>
@@ -750,60 +750,51 @@
         let i = $(this).index();
 
         cardSection.show();
-        ProductNavList.eq(i).toggleClass("gg-text-blue");
 
-        ProductNavList.eq(0).click(function () {
-            cardSection.show();
-        })
 
         navMenu.click(function () {
             location.reload(true);
         })
 
-        ProductNavList1.click(function () {
-            car.show();
+        function handleNavClick(index, sectionToShow, sectionsToHide) {
+            ProductNavList.removeClass("navActive");
+            ProductNavList.eq(index).addClass("navActive");
+
+            car.hide();
             health.hide();
             travel.hide();
             driver.hide();
             etc.hide();
-        })
+
+            sectionToShow.show();
+
+            sectionsToHide.forEach(section => section.hide());
+        }
+
+        ProductNavList.eq(0).click(function () {
+            handleNavClick(0, cardSection);
+        });
+
+        ProductNavList1.click(function () {
+            handleNavClick(1, car, [health, travel, driver, etc]);
+        });
 
         ProductNavList2.click(function () {
-            car.hide();
-            health.show();
-            travel.hide();
-            driver.hide();
-            etc.hide();
-        })
+            handleNavClick(2, health, [car, travel, driver, etc]);
+        });
 
         ProductNavList3.click(function () {
-            car.hide();
-            health.hide();
-            travel.show();
-            driver.hide();
-            etc.hide();
-        })
+            handleNavClick(3, travel, [car, health, driver, etc]);
+        });
 
         ProductNavList4.click(function () {
-            car.hide();
-            health.hide();
-            travel.hide();
-            driver.show();
-            etc.hide();
-        })
+            handleNavClick(4, driver, [car, health, travel, etc]);
+        });
 
         ProductNavList5.click(function () {
-            car.hide();
-            health.hide();
-            travel.hide();
-            driver.hide();
-            etc.show();
-        })
+            handleNavClick(5, etc, [car, health, travel, driver]);
+        });
 
-        ProductNavList.click(function () {
-            this.addClass("color", "red");
-            alert("ProductNavListA");
-        })
 
         /*withNeedINmobileBtn*/
         let withNeedINmobileBtn = $(".withNeedINmobileBtn");

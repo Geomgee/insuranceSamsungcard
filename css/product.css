@@ -54,8 +54,8 @@ section {
     line-height: 60px;
 }
 
-.productNav ul li:hover a, .navActive{
-    color: #2e81f8 !important;
+.productNav ul li:hover a, .productNav ul li.navActive a{
+    color: #2e81f8;
 }
 
 .productNav ul li a {
@@ -63,6 +63,7 @@ section {
     font-size: 16px;
     color: #303030;
 }
+
 
 h3 {
     text-align: center;
