@@ -28,7 +28,9 @@
 		}
 
 		.loginBox {
+            overflow-y: scroll;
 			width: 450px;
+            height: 650px;
 			padding: 50px;
 			margin: 0 auto;
 			/*border: 1px solid #dcdcdc;*/
@@ -56,13 +58,40 @@
 		.loginBox form {
 			display: flex;
 			flex-direction: column;
-			gap: 20px;
-			align-items: center;
+			gap: 13px; /*this*/
+			align-items: flex-start; /*this*/
 		}
 
-		.loginBox input {
+		.loginBox input#mail1, .loginBox select#mail2{
+			width: 46%;
+        }
+
+		input#birth1{
+			width: 46%;
+		}
+		input#birth2{
+			width: 29%;
+		}
+
+        .gg-dja{
+	        display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .gg-3{
+	        width: 30% !important;
+        }
+
+        .gg-gray{
+            color: #797979;
+        }
+
+
+        /*this*/
+		.loginBox input, .loginBox select {
 			top: 45px;
-			border-radius: 10px;
+			border-radius: 18px; /*this*/
 			width: 350px;
 			height: 53px;
 			padding: 0 25px;
@@ -124,6 +153,12 @@
 			justify-content: space-between;
 			width: 100%;
 		}
+
+        /*++++*/
+		.borderR18{
+			border-radius: 18px;
+        }
+
 
     </style>
 </head>
@@ -197,25 +232,45 @@
         </nav>
     </header>
     <section>
-        <div class="loginBox">
+        <div id="signUp" class="loginBox borderR18">
             <div>회원가입</div>
-            <form action="login">
-                <div class="inputBox">
-                    <input type="text" id="id" placeholder="아이디 6~12자리 입력">
-                    <div class="idBtn">
-                        <input type="checkbox" name="ck_id" id="ck_id">
-                        <label for="ck_id"><span>저장</span></label>
-                    </div>
+            <form action="signUp">
+                <label for="id">아이디</label>
+                <input type="text" id="id" placeholder="아이디 6~12자리 입력">
+                <label for="id">비밀번호</label>
+                <input type="password" id="pw" placeholder="비밀번호 6~20자리 입력">
+                <label for="mail">이메일</label>
+                <div class="gg-dja">
+                    <input type="text" id="mail1" placeholder="이메일@example.com">@
+                    <select name="mail2" id="mail2">
+                        <option value="">직접입력</option>
+                        <option value="">naver.com</option>
+                        <option value="">hanmail.net</option>
+                        <option value="">gmail.com</option>
+                        <option value="">nate.com</option>
+                        <option value="">kakao.com</option>
+                    </select>
+                </div>
+                <label for="birth1">주민등록번호 / 외국인 등록번호</label>
+                <div class="gg-dja">
+                    <input type="text" id="birth1" placeholder="앞 6자리" maxlength="6">-
+                    <input type="text" id="birth2" placeholder="뒤 1자리" maxlength="1"><span class="d-block gg-gray">****** &nbsp;&nbsp;</span>
+                </div>
+                <label for="tel">휴대전화번호</label>
+                <div class="gg-dja">
+                    <select name="tel1" id="tel" class="gg-3">
+                        <option name="tel1" value="">010</option>
+                        <option name="tel1" value="">011</option>
+                    </select>-
+                    <input type="text" id="tel2" placeholder="중간번호" maxlength="4" class="gg-3">-
+                    <input type="text" id="tel3" placeholder="끝번호" maxlength="4" class="gg-3">
                 </div>
                 <div class="inputBox">
-                    <input type="password" id="pw" placeholder="비밀번호 6~20자리 입력">
-                </div>
-                <div class="inputBox">
-                    <input type="submit" value="로그인">
+                    <input type="submit" value="회원가입">
                 </div>
                 <div>
                     <span>아이디 찾기</span>
-                    <span>회원가입</span>
+                    <span>비밀번호 찾기</span>
                 </div>
             </form>
         </div>

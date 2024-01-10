@@ -118,20 +118,30 @@
     /* ---------- login 모달 열고 닫기 --------- */
     let loginBtn = $(".loginBtn");
     let loginModal = $(".loginModal");
-    let loginBox = $(".loginBox");
-    let logincloseBtn = $(".loginBox .btn-close");
+    let loginBox = $("#login.loginBox");
+    let logincloseBtn = $("#login.loginBox .btn-close");
+    let signUpBtn = $(".signUpBtn");
+    let signUpBox = $("#signUp.loginBox");
+    let signUpcloseBtn = $("#signUp.loginBox .btn-close");
 
     loginModal.hide();
-    
+    signUpBox.hide();
+
     /* 로그인 모달 열기 */
     loginBtn.click(function(){
         loginModal.show();
         $('body').css('overflow', 'hidden');
     });
-    
+
+    /* 회원가입 모달 열기 */
+    signUpBtn.click(function(){
+        signUpBox.show();
+        loginModal.hide();
+        $('body').css('overflow', 'hidden');
+    });
     /* 로그인 모달 닫기 */
     $(document).mouseup(function(e){
-        if(!loginBox.is(e.target) && loginBox.has(e.target).length === 0){
+        if(!loginBox.is(e.target) && !signUpBtn.is(e.target) && loginBox.has(e.target).length === 0 ){
             loginModal.hide();
             $('body').css('overflow', 'auto');
         }
@@ -141,6 +151,20 @@
         loginModal.hide();
         $('body').css('overflow', 'auto');
     });
+    /*-----------------------------------------------*/
+    /* 회원가입 모달 닫기 */
+    $(document).mouseup(function(e){
+        if(!signUpBox.is(e.target) && signUpBox.has(e.target).length === 0){
+            loginModal.hide();
+            $('body').css('overflow', 'auto');
+        }
+    });
+
+    signUpcloseBtn.click(function(){
+        loginModal.hide();
+        $('body').css('overflow', 'auto');
+    });
+
 
 
     function checkLogin(){

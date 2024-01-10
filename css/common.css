@@ -98,6 +98,15 @@ header {
     font-size: 15px;
 }
 
+/*색상표*/
+.c-grey{
+    color: #575b63;
+}
+
+.gg-gray{
+    color: #797979;
+}
+
 .c-littleBlue{
     background: #f2f6fa;
 }
@@ -108,14 +117,27 @@ header {
     font-size: 16px;
 }
 
+/*레이아웃*/
+
 .img-h24 {
     height: 24px;
     float: left;
 }
 
-.c-grey{
-    color: #575b63;
+.gg-dja{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.gg-3{
+    width: 30% !important;
+}
+
+.borderR18{
+    border-radius: 18px;
+}
+
 
 /*--------------nav-------------*/
 #logo, .logo {
@@ -877,7 +899,7 @@ button.btn.dropdown-toggle{
     align-items: center;
 }
 
-.loginBox input {
+.loginBox input, #signUp select {
     top: 45px;
     border-radius: 10px;
     width: 350px;
@@ -892,7 +914,7 @@ button.btn.dropdown-toggle{
     color: #dcdcdc;
 }
 
-.loginBox input[type=button] {
+.loginBox input[type=button], .loginBox input[type=submit] {
     background: #2090FF;
     border: none;
     color: white;
@@ -941,6 +963,44 @@ label span{
     justify-content: space-between;
     width: 100%;
 }
+
+.loginBox form>div:last-child a{
+    color: #444444;
+}
+.loginBox form>div:last-child a:hover{
+    color: #2090FF;
+}
+
+/*-----------------signUp*/
+#signUp{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 650px;
+}
+
+#signUp .loginBox input, #signUp select {
+    border-radius: 18px;
+}
+
+#signUp form{
+    gap: 12px;
+    align-items: flex-start;
+}
+
+#signUp input#mail1, #signUp select, #signUp input#birth1{
+    width: 46%;
+}
+
+input#birth2{
+    width: 29%;
+}
+
+.telBox input, .telBox select{
+    padding: 0 18px !important;
+    text-align: center;
+}
+
+
 
 /*****************************************************************/
 /*                          미디어 쿼리                            */
