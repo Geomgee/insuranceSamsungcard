@@ -950,6 +950,11 @@ button.btn.dropdown-toggle{
     background: url(../img/bg_form_blue_small.png) no-repeat;
 }
 
+label{
+    margin-top: 0.5rem;
+    margin-bottom: unset;
+}
+
 label span{
     display: block;
     width: 60px;
@@ -958,17 +963,18 @@ label span{
     font-size: 16px;
 }
 
+
 .loginBox form>div:last-child{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+display: flex;
+justify-content: space-between;
+width: 100%;
 }
 
 .loginBox form>div:last-child a{
-    color: #444444;
+color: #444444;
 }
 .loginBox form>div:last-child a:hover{
-    color: #2090FF;
+color: #2090FF;
 }
 
 /*-----------------signUp*/
@@ -978,11 +984,11 @@ label span{
     height: 650px;
 }
 
-#signUp .loginBox input, #signUp select {
+#signUp.loginBox input, #signUp.loginBox select {
     border-radius: 18px;
 }
 
-#signUp form{
+#signUp.loginBox form{
     gap: 12px;
     align-items: flex-start;
 }

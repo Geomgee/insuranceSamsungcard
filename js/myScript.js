@@ -130,22 +130,24 @@
     /* 로그인 모달 열기 */
     loginBtn.click(function(){
         loginModal.show();
+        loginBox.show();
+        signUpBox.hide();
         $('body').css('overflow', 'hidden');
     });
 
     /* 회원가입 모달 열기 */
     signUpBtn.click(function(){
+        loginBox.hide();
         signUpBox.show();
-        loginModal.hide();
         $('body').css('overflow', 'hidden');
     });
     /* 로그인 모달 닫기 */
-    $(document).mouseup(function(e){
-        if(!loginBox.is(e.target) && !signUpBtn.is(e.target) && loginBox.has(e.target).length === 0 ){
-            loginModal.hide();
-            $('body').css('overflow', 'auto');
-        }
-    });
+    // $(document).mouseup(function(e){
+    //     if(!loginBox.is(e.target) && !signUpBtn.is(e.target) && loginBox.has(e.target).length === 0 ){
+    //         loginModal.hide();
+    //         $('body').css('overflow', 'auto');
+    //     }
+    // });
 
     logincloseBtn.click(function(){
         loginModal.hide();
@@ -153,15 +155,17 @@
     });
     /*-----------------------------------------------*/
     /* 회원가입 모달 닫기 */
-    $(document).mouseup(function(e){
-        if(!signUpBox.is(e.target) && signUpBox.has(e.target).length === 0){
-            loginModal.hide();
-            $('body').css('overflow', 'auto');
-        }
-    });
+    // $(document).mouseup(function(e){
+    //     if(!signUpBox.is(e.target) && signUpBox.has(e.target).length === 0){
+    //         signUpBox
+    //         loginModal.hide();
+    //         $('body').css('overflow', 'auto');
+    //     }
+    // });
 
     signUpcloseBtn.click(function(){
         loginModal.hide();
+        signUpBox.hide();
         $('body').css('overflow', 'auto');
     });
 
