@@ -130,6 +130,7 @@
     /* 로그인 모달 열기 */
     loginBtn.click(function(){
         loginModal.show();
+        loginBox.addClass("animate__animated animate__fadeInDown");
         loginBox.show();
         signUpBox.hide();
         $('body').css('overflow', 'hidden');
@@ -138,6 +139,7 @@
     /* 회원가입 모달 열기 */
     signUpBtn.click(function(){
         loginBox.hide();
+        signUpBox.addClass("animate__animated animate__fadeIn");
         signUpBox.show();
         $('body').css('overflow', 'hidden');
     });
@@ -153,19 +155,11 @@
         loginModal.hide();
         $('body').css('overflow', 'auto');
     });
-    /*-----------------------------------------------*/
-    /* 회원가입 모달 닫기 */
-    // $(document).mouseup(function(e){
-    //     if(!signUpBox.is(e.target) && signUpBox.has(e.target).length === 0){
-    //         signUpBox
-    //         loginModal.hide();
-    //         $('body').css('overflow', 'auto');
-    //     }
-    // });
 
     signUpcloseBtn.click(function(){
-        loginModal.hide();
+        signUpBox.addClass("animate__animated animate__slideInDown");
         signUpBox.hide();
+        loginModal.hide();
         $('body').css('overflow', 'auto');
     });
 

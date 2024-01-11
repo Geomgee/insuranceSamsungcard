@@ -733,7 +733,7 @@ button.btn.dropdown-toggle{
     color: black;
 }
 
-.dropup .dropdown-toggle::after, .arrow-down {
+.dropup .dropdown-toggle::after, .arrow-down, .arrow-right {
     content: " ";
     width: 20px;
     height: 20px;
@@ -743,6 +743,10 @@ button.btn.dropdown-toggle{
     position: absolute;
     right: 10px;
     transform: rotate(90deg);
+}
+
+.arrow-right{
+    transform: rotate(0deg);
 }
 
 .withNeedINmobileBtn .arrow-down {
@@ -951,7 +955,6 @@ button.btn.dropdown-toggle{
 }
 
 label{
-    margin-top: 0.5rem;
     margin-bottom: unset;
 }
 
@@ -983,6 +986,20 @@ color: #2090FF;
     overflow-y: scroll;
     height: 650px;
 }
+
+/* 스크롤바 트랙 위쪽 여백 공간 주기 위해서 */
+#signUp::-webkit-scrollbar-button:vertical:start:decrement,
+#signUp::-webkit-scrollbar-button:vertical:start:increment {
+    display: block;
+    height: 25px;
+}
+
+/* 만일 스크롤바 트랙 아래쪽도 여백 공간을 주고 싶다면 ... */
+#signUp::-webkit-scrollbar-button:vertical:end:decrement {
+    display: block;
+    width: 25px;
+}
+
 
 #signUp.loginBox input, #signUp.loginBox select {
     border-radius: 18px;
