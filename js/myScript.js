@@ -1,3 +1,5 @@
+
+
     /*nav 영역*/
     let menuBtn = $(".navR .btn-menu");
     let closeBtn = $(".navR .btn-close");
@@ -64,34 +66,6 @@
     });
 
 
-    /*slick*/
-    $('.responsive').slick({
-        rows: 1,
-        arrows: true,
-        dots: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 9,
-        slidesToScroll: 2,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 6,
-                    slidesToScroll: 3,
-                    infinite: true,
-                }
-            },
-            {
-                breakpoint: 720,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 2
-                }
-            }
-        ]
-    });
-
     /*withNeedINmobileBtn*/
     let withNeedINmobileBtn = $(".withNeedINmobileBtn");
     let withNeedINmobileArrow = $(".arrow-down");
@@ -113,7 +87,6 @@
         }, 200)
         return false;
     });
-
 
     /* ---------- login 모달 열고 닫기 --------- */
     let loginBtn = $(".loginBtn");
@@ -162,6 +135,7 @@
         loginModal.hide();
         $('body').css('overflow', 'auto');
     });
+
 
 
 

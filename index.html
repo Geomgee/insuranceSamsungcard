@@ -146,11 +146,11 @@
             <div class="nav-menu">
                 <ul>
                     <li class="menu-top">카테고리</li>
-                    <li><a href="#">자동차</a></li>
-                    <li><a href="#">기타</a></li>
-                    <li><a href="#">암·건강</a></li>
-                    <li><a href="#">이륜차·운전자</a></li>
-                    <li><a href="#">여행·레저</a></li>
+                    <li class="show1"><a href="#">자동차</a></li>
+                    <li class="show2"><a href="#">기타</a></li>
+                    <li class="show3"><a href="#">암·건강</a></li>
+                    <li class="show4"><a href="#">이륜차·운전자</a></li>
+                    <li class="show5"><a href="#">여행·레저</a></li>
                 </ul>
                 <ul>
                     <li class="menu-top">상품 모아보기</li>
@@ -161,14 +161,13 @@
                 </ul>
                 <ul>
                     <li class="menu-top">혜택</li>
-                    <li><a href="#">이벤트</a></li>
-                    <li><a href="#">보험상담</a></li>
+                    <li><a href="event.html">이벤트</a></li>
+                    <li><a href="counsel.html">보험상담</a></li>
                 </ul>
             </div>
             <!--검색 버튼 클릭 시 보이는 네비-->
             <div class="nav-search">
                 <input type="search" name="search" id="search" placeholder="궁금한 보험을 입력해보세요">
-                <button type="button" class="btn-close"></button>
                 <button type="button" class="btn-search"></button>
                 <div class="tab-search">
                     <h3>최근 확인 보험</h3>
@@ -184,6 +183,47 @@
             </div>
         </nav>
     </header>
+    <!--mobile nav-->
+    <nav class="mobileNav">
+        <div>
+            <button type="button" class="btn-menu hamburger"></button>
+            <!--M nav 클릭 전 숨겨질 영역-->
+            <div class="mobileNavList">
+                <div>
+                    <h2 class="logo"><a href="index.html"></a></h2>
+                    <button type="button" class="btn-close"></button>
+                </div>
+                <ul>
+                    <li class="menu-top">
+                        <span>카테고리</span>
+                        <div class="arrow-down"></div>
+                    </li>
+                    <li class="show1"><a href="#">자동차</a></li>
+                    <li class="show2"><a href="#">기타</a></li>
+                    <li class="show3"><a href="#">암·건강</a></li>
+                    <li class="show4"><a href="#">이륜차·운전자</a></li>
+                    <li class="show5"><a href="#">여행·레저</a></li>
+                </ul>
+                <ul>
+                    <li class="menu-top">
+                        상품 모아보기
+                        <div class="arrow-down"></div>
+                    </li>
+                    <li><a href="#">인기순위</a></li>
+                    <li><a href="#">신규상품</a></li>
+                    <li><a href="#">보험사별</a></li>
+                    <li><a href="#">전체보기</a></li>
+                </ul>
+                <ul>
+                    <li class="menu-top">혜택
+                        <div class="arrow-down"></div>
+                    </li>
+                    <li><a href="event.html">이벤트</a></li>
+                    <li><a href="counsel.html">보험상담</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!--최상단 캐로셀-->
     <section id="carousel">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -552,6 +592,35 @@
 <script>
     $(function () {
         ScrollOut();
+
+
+        /*slick*/
+        $('.responsive').slick({
+            rows: 1,
+            arrows: true,
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 9,
+            slidesToScroll: 2,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 3,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 720,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 2
+                    }
+                }
+            ]
+        });
     })
 </script>
 

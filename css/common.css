@@ -83,6 +83,7 @@ header {
 .headerTop .loginBtn{
     font-size: 14px;
     color: #666666;
+    font-weight: normal;
 }
 
 /* common style */
