@@ -1,0 +1,171 @@
+/************ section ************/
+section{
+	max-width: 940px;
+	padding: 50px 60px;
+	letter-spacing: -1px;
+}
+/************ mainImg ************/
+.mainImg {
+	letter-spacing: -1px;
+	background: url("../img/P_thumb_940x410_3.png") no-repeat center;
+	width: 100%;
+	height: 410px;
+}
+.textBox{
+	margin: 0 auto;
+	width: 940px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding: 50px 60px;
+	gap: 20px;
+}
+.mainImg h3{
+	font-size: 34px;
+	font-weight: normal;
+}
+.mainImg span{
+	color: #666666;
+	font-size: 16px;
+}
+
+/************ 기간/대상/혜택 설명 ************/
+.spanList{
+	margin-bottom: 50px;
+}
+.spanList h3{
+	margin-bottom: 20px;
+}
+.spanList span{
+	display: block;
+	margin-bottom: 40px;
+}
+
+/************ littleBlueBox | 작은 파란 상자 ************/
+.littleBlueBox {
+	background: #f1f5fc;
+	color: #0080FF;
+	border-radius: 12px;
+	padding: 30px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/************ cardSection ************/
+.cardSectionParent {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 15px 0 40px;
+}
+
+.cardSection{
+	width: 48%;
+	height: 138px;
+	background: white;
+	border: 1px solid #d3d5da;
+	border-radius: 12px;
+	padding: 28px;
+	gap: 12px;
+	margin-top: 15px;
+	/*box-shadow: 0 4px 12px rgb(0 0 0 / 8%);*/
+	float: left;
+}
+
+.cardSection div:first-child {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.cardSection img {
+	height: 18px;
+	font-weight: unset;
+	margin-right: 15px;
+}
+
+.cardSection .detailBtn {
+	width: 100%;
+	background: #f1f5fc;
+	color: #0080FF;
+	border-radius: 12px;
+	padding: 10px;
+	text-align: center;
+	font-weight: normal;
+}
+
+/************ cardSection ************/
+.blueBox{
+	background: #f1f5fc;
+	border-radius: 12px;
+	padding: 30px;
+	font-size: 18px;
+}
+.blueBox h3{
+	color: #0080FF;
+	margin-bottom: 10px;
+}
+.blueBox ul{
+	margin-left: 15px;
+}
+.blueBox ul li{
+	padding: 5px;
+	font-size: 16px;
+}
+
+/************ notice ************/
+.notice{
+
+}
+.notice .noticeBtn{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+.notice .noticeBtn h3{
+	font-size: 15px;
+}
+.notice .arrow-down{
+	position: unset;
+	display: block;
+}
+.noticeHidden{
+	border-top: 1px solid #d3d5da;
+	padding: 20px;
+	transition: max-height 0.5s ease-out;
+}
+
+.notice li{
+	padding: 5px 10px;
+	font-size: 15px;
+	color: #666666;
+}
+
+.ulDot li{
+	list-style: "• ";
+}
+.ulRefMark li{
+	list-style: " ※ ";
+}
+
+.notice .ulRefMark li{
+	margin-left: 5px;
+}
+
+/************ listBtn ************/
+.listBtn{
+	margin: 20px auto;
+	width: 100px;
+	text-align: center;
+	background: #0080FF;
+	color: white;
+	font-weight: bold;
+	padding: 15px;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}

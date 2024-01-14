@@ -99,6 +99,10 @@ header {
     font-size: 15px;
 }
 
+.c-bold{
+    font-weight: bolder;
+}
+
 /*색상표*/
 .c-grey{
     color: #575b63;
@@ -378,7 +382,6 @@ nav ul {
     margin-right: 25px;
 }
 
-
 /*토글 버튼 (숨기기)*/
 .mobileNavList ul li, .mobileNavList .menu-top::after{
     /*display: none;*/
@@ -391,8 +394,6 @@ nav ul {
     top: 15px;
     right: 20px;
 }
-
-
 
 /************/
 /*search tab*/
