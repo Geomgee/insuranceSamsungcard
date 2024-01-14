@@ -16,7 +16,6 @@ section{
     height: 157px;
 }
 
-
 /* section */
 .eventBoxParent{
     max-width: 968px;
@@ -29,6 +28,7 @@ section{
     background: white;
     padding: 2px;
     border: 1px solid #d3d5da;
+    cursor: pointer;
 }
 
 .eventBox ul{
@@ -38,16 +38,47 @@ section{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-
 }
 
 .eventBox ul li{
     width: 100%;
 }
 
+/*이벤트 박스 호버 시*/
+.eventBox:hover.eventBox{
+    box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+}
 
-.eventBox:hover{
+.eventBox:hover.eventBox img{
+    position: absolute;
+    width: 300px;
+    height: 243px;
+    object-fit: cover;
+}
 
+.eventBox:hover.eventBox ul{
+    transition: height 0.7s;
+    justify-content: space-around;
+    position: relative;
+    width: 300px;
+    height: 243px;
+    margin: 0 auto;
+    padding: 30px;
+    
+    background: rgba( 255, 255, 255, 0.85 );
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.eventBox:hover.eventBox ul::after{
+    content:"자세히 보기";
+    width: 100%;
+    text-align: center;
+    background: #595959;
+    color: white;
+    border-radius: 8px;
+    padding: 5px;
 }
 
 /*********************************************/
