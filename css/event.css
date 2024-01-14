@@ -34,7 +34,7 @@ section{
 .eventBox ul{
     width: 300px;
     height: 110px;
-    padding: 13px 24px 0px;
+    padding: 13px 24px 0;
     display: flex;
     justify-content: space-between;
     flex-direction: column;

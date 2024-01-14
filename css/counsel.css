@@ -101,6 +101,13 @@ section{
 .card input[type=button]:nth-of-type(2) {
 	border: 1px solid #2e81f8;
 	color: #2e81f8;
+	cursor: pointer;
+}
+
+.card input[type=button]:nth-of-type(2):hover {
+	border: 1px solid #2e81f8;
+	background: #2e81f8;
+	color: white;
 }
 
 /*notice*/
