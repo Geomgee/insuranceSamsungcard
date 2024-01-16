@@ -55,6 +55,10 @@ nav, .realFooter {
     margin: 0 auto;
 }
 
+section{
+    margin: 0 auto;
+}
+
 header {
     width: 100%;
     /*border: 1px solid blueviolet;*/
@@ -76,6 +80,12 @@ header {
     font-weight: normal;
 }
 
+.headerTop .loginBtn{
+    font-size: 14px;
+    color: #666666;
+    font-weight: normal;
+}
+
 /* common style */
 .pointer {
     cursor: pointer;
@@ -89,6 +99,19 @@ header {
     font-size: 15px;
 }
 
+.c-bold{
+    font-weight: bolder;
+}
+
+/*색상표*/
+.c-grey{
+    color: #575b63;
+}
+
+.gg-gray{
+    color: #797979;
+}
+
 .c-littleBlue{
     background: #f2f6fa;
 }
@@ -99,14 +122,27 @@ header {
     font-size: 16px;
 }
 
+/*레이아웃*/
+
 .img-h24 {
     height: 24px;
     float: left;
 }
 
-.c-grey{
-    color: #575b63;
+.gg-dja{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.gg-3{
+    width: 30% !important;
+}
+
+.borderR18{
+    border-radius: 18px;
+}
+
 
 /*--------------nav-------------*/
 #logo, .logo {
@@ -186,8 +222,11 @@ nav ul {
 }
 
 .btn-close {
-    display: none;
     background-position: -60px 0;
+}
+
+.navR .btn-close {
+    display: none;
 }
 
 /*nav-menu*/
@@ -240,7 +279,7 @@ nav ul {
 }
 
 /*main nav hover시*/
-.main a:hover, .headerTop a:hover, .nav-menu li a:hover {
+.main a:hover, .headerTop span:hover, .nav-menu li a:hover {
     color: #2e81f8;
 }
 
@@ -291,10 +330,21 @@ nav ul {
     position: absolute;
     width: 300px;
     height: 100vh;
-    background: white;
     top: 0;
     right: 0;
     display: none;
+}
+
+.mobileNavList{
+    position: absolute;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    display: none;
+    margin-top: 30px;
 }
 
 .mobileNav>div, .mobileNavList, .mobileNavList>div{
@@ -302,8 +352,8 @@ nav ul {
     /*height: 100%;*/
 }
 
-.mobileNav .mobileNavList{
-    margin-top: 50px;
+.mobileNavList .logo{
+    margin-left: 10px;
 }
 
 .mobileNavList ul{
@@ -312,7 +362,7 @@ nav ul {
 }
 
 .mobileNavList ul:nth-of-type(1){
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
 .mobileNavList ul li{
@@ -343,21 +393,18 @@ nav ul {
     margin-right: 25px;
 }
 
-
 /*토글 버튼 (숨기기)*/
 .mobileNavList ul li, .mobileNavList .menu-top::after{
     /*display: none;*/
 }
 
 /*icon*/
-.hamburger{
+.hamburger, .mobileNav .btn-close{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 20px;
 }
-
-
 
 /************/
 /*search tab*/
@@ -476,7 +523,6 @@ footer {
     padding: 0;
     width: 100%;
     /*height: 371px;*/
-    margin-top: 16px;
     font-family: 'SpoqaHanSansNeo-Regular', serif;
     background-color: #F9FAFC;
     position: relative;
@@ -682,6 +728,10 @@ footer .tel li span {
     border-radius: 12px;
 }
 
+button.btn.dropdown-toggle{
+    padding-left: 20px;
+}
+
 .dropdown-menu {
     width: 100%;
     position: absolute;
@@ -696,7 +746,7 @@ footer .tel li span {
     color: black;
 }
 
-.dropup .dropdown-toggle::after, .arrow-down {
+.dropup .dropdown-toggle::after, .arrow-down, .arrow-right {
     content: " ";
     width: 20px;
     height: 20px;
@@ -706,6 +756,10 @@ footer .tel li span {
     position: absolute;
     right: 10px;
     transform: rotate(90deg);
+}
+
+.arrow-right{
+    transform: rotate(0deg);
 }
 
 .withNeedINmobileBtn .arrow-down {
@@ -742,6 +796,7 @@ footer .tel li span {
 
 .withNeedINmobile ul li {
     padding: 0px;
+    color: #666666;
 }
 
 .withNeedINmobile ul li:last-child {
@@ -806,6 +861,183 @@ footer .tel li span {
     clear: both;
 }
 
+/***********************************************************/
+/*login modal*/
+.loginModal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4444;
+    padding-top: 200px;
+    font-size: 14px;
+    
+    /*blur 효과*/
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+}
+
+.loginBox {
+    width: 450px;
+    padding: 50px;
+    margin: 0 auto;
+    /*border: 1px solid #dcdcdc;*/
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+    /*blur 효과*/
+    /*background: white;*/
+    /*box-shadow: 0 4px 12px rgb(0 0 0 / 20%);*/
+    background: rgba( 255, 255, 255, 0.9 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+}
+
+.loginBox .loginHeader{
+    width: 100%;
+    margin-top: -10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*login form*/
+.loginBox form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.loginBox input, #signUp select {
+    top: 45px;
+    border-radius: 10px;
+    width: 350px;
+    height: 53px;
+    padding: 0 25px;
+    border: 1px solid #dcdcdc;
+    font-family: 'SpoqaHanSansNeo-Regular', serif;
+    font-weight: normal;
+}
+
+.loginBox input::placeholder {
+    color: #dcdcdc;
+}
+
+.loginBox input[type=button], .loginBox input[type=submit] {
+    background: #2090FF;
+    border: none;
+    color: white;
+}
+
+.loginBox input:hover, .loginBox input:active {
+    border: 1px solid #2090FF;
+}
+
+.idBtn{
+    position: absolute;
+    margin-top: -38px;
+    right: 50%;
+    margin-right: -120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #888888;
+}
+
+.loginBox input[type=checkbox] {
+    display: none;
+}
+
+.loginBox input[type=checkbox] + label {
+    cursor: pointer;
+    width: 23px;
+    height: 23px;
+    background: url(../img/bg_form_blue_small.png) no-repeat -50px 0;
+    vertical-align: middle;
+}
+.loginBox input[type=checkbox]:checked + label {
+    background: url(../img/bg_form_blue_small.png) no-repeat;
+}
+
+label{
+    margin-bottom: unset;
+}
+
+label span{
+    display: block;
+    width: 60px;
+    text-align: right;
+    letter-spacing: -1px;
+    font-size: 16px;
+}
+
+
+.loginBox form>div:last-child{
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+
+.loginBox form>div:last-child a{
+color: #444444;
+}
+.loginBox form>div:last-child a:hover{
+color: #2090FF;
+}
+
+/*-----------------signUp*/
+#signUp{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 650px;
+}
+
+/* 스크롤바 트랙 위쪽 여백 공간 주기 위해서 */
+#signUp::-webkit-scrollbar-button:vertical:start:decrement,
+#signUp::-webkit-scrollbar-button:vertical:start:increment {
+    display: block;
+    height: 25px;
+}
+
+/* 만일 스크롤바 트랙 아래쪽도 여백 공간을 주고 싶다면 ... */
+#signUp::-webkit-scrollbar-button:vertical:end:decrement {
+    display: block;
+    width: 25px;
+}
+
+
+#signUp.loginBox input, #signUp.loginBox select {
+    border-radius: 18px;
+}
+
+#signUp.loginBox form{
+    gap: 12px;
+    align-items: flex-start;
+}
+
+#signUp input#mail1, #signUp select, #signUp input#birth1{
+    width: 46%;
+}
+
+input#birth2{
+    width: 29%;
+}
+
+.telBox input, .telBox select{
+    padding: 0 18px !important;
+    text-align: center;
+}
+
+
+
 /*****************************************************************/
 /*                          미디어 쿼리                            */
 /*****************************************************************/
@@ -850,7 +1082,7 @@ footer .tel li span {
     }
 
 
-    .hamburger{
+    .hamburger, .mobileNav .btn-close{
         display: unset;
     }
 
@@ -933,10 +1165,12 @@ footer .tel li span {
     .award ul{
         padding-top: 66px;
     }
+
     .award img{
         width: 36px;
         height: 36px;
     }
+
     .award ul li span {
         line-height: 25px;
     }
