@@ -1,6 +1,5 @@
 
-
-    /*nav 영역*/
+/* nav *******************/
     let menuBtn = $(".navR .btn-menu");
     let closeBtn = $(".navR .btn-close");
     let searchBtn = $(".navR .btn-search");
@@ -47,7 +46,47 @@
         shadow.hide();
     })
 
-    /*캐러셀 일시정지 & 동작*/
+    /* mobile nav */
+    let mobileNavList = $(".mobileNavList");
+    let mobileNavListUl = $(".mobileNavList ul");
+    let mobileNavBtn = $(".mobileNav .hamburger");
+    let mobileNavCloseBtn = $(".mobileNav .btn-close");
+    let menuHidden = $(".menu-hidden");
+
+    mobileNavList.hide();
+    mobileNavCloseBtn.hide();
+    menuHidden.hide();
+    
+    /*todo mobilenav와 nav 연동 되게*/
+    if(nav_menu.show()){
+        mobileNavList.show();
+    }
+
+    mobileNavBtn.click(function(){
+        mobileNavList.show();
+        mobileNavBtn.hide();
+        mobileNavCloseBtn.show();
+    })
+
+    mobileNavCloseBtn.click(function(){
+        mobileNavList.hide();
+        mobileNavBtn.show();
+        mobileNavCloseBtn.hide();
+    })
+
+    /* mobile nav - toggle */
+    mobileNavListUl.click(function(){
+        let tg = $(this);
+        let i = tg.index();
+
+        mobileNavListUl.eq(i-1).find(menuHidden).toggle();
+        mobileNavListUl.eq(i-1).find($(".arrow-down")).toggleClass("arrow-active");
+
+    })
+    /*-------------------------------------------------------------*/
+
+
+    /* 캐러셀 일시정지 & 동작 */
     let pauseBtn = $(".pauseBtn");
     let playBtn = $("#carousel .material-symbols-outlined");
 
@@ -64,9 +103,10 @@
         pauseBtn.show();
         playBtn.hide();
     });
+    /*-------------------------------------------------------------*/
 
-
-    /*withNeedINmobileBtn*/
+    /* footer *******************/
+    /* withNeedINmobileBtn */
     let withNeedINmobileBtn = $(".withNeedINmobileBtn");
     let withNeedINmobileArrow = $(".arrow-down");
     let withNeedINmobileList = $(".withNeedINmobileList");
@@ -87,8 +127,11 @@
         }, 200)
         return false;
     });
+    /*-------------------------------------------------------------*/
 
-    /* ---------- login 모달 열고 닫기 --------- */
+
+    /* login *********************/
+    /* login 모달 열고 닫기 */
     let loginBtn = $(".loginBtn");
     let loginModal = $(".loginModal");
     let loginBox = $("#login.loginBox");
@@ -116,13 +159,6 @@
         signUpBox.show();
         $('body').css('overflow', 'hidden');
     });
-    /* 로그인 모달 닫기 */
-    // $(document).mouseup(function(e){
-    //     if(!loginBox.is(e.target) && !signUpBtn.is(e.target) && loginBox.has(e.target).length === 0 ){
-    //         loginModal.hide();
-    //         $('body').css('overflow', 'auto');
-    //     }
-    // });
 
     logincloseBtn.click(function(){
         loginModal.hide();
@@ -135,10 +171,10 @@
         loginModal.hide();
         $('body').css('overflow', 'auto');
     });
+    /*-------------------------------------------------------------*/
 
 
-
-
+    /* validation **********************/
     function checkLogin(){
         var form = document.loginForm;
         let pw = form.pw.value;
@@ -157,4 +193,5 @@
         }
 
         form.submit();
+
     }
