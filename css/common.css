@@ -330,10 +330,21 @@ nav ul {
     position: absolute;
     width: 300px;
     height: 100vh;
-    background: white;
     top: 0;
     right: 0;
     display: none;
+}
+
+.mobileNavList{
+    position: absolute;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    display: none;
+    margin-top: 30px;
 }
 
 .mobileNav>div, .mobileNavList, .mobileNavList>div{
@@ -341,8 +352,8 @@ nav ul {
     /*height: 100%;*/
 }
 
-.mobileNav .mobileNavList{
-    margin-top: 50px;
+.mobileNavList .logo{
+    margin-left: 10px;
 }
 
 .mobileNavList ul{
@@ -351,7 +362,7 @@ nav ul {
 }
 
 .mobileNavList ul:nth-of-type(1){
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
 .mobileNavList ul li{
@@ -388,9 +399,9 @@ nav ul {
 }
 
 /*icon*/
-.hamburger{
+.hamburger, .mobileNav .btn-close{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 20px;
 }
@@ -1071,7 +1082,7 @@ input#birth2{
     }
 
 
-    .hamburger{
+    .hamburger, .mobileNav .btn-close{
         display: unset;
     }
 
