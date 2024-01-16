@@ -323,7 +323,7 @@ nav ul {
     content: "";
     background-color: #797979;
     opacity: 0.6;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 141vh;
     z-index: 3;

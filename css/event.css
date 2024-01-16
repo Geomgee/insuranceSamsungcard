@@ -24,6 +24,7 @@ section{
     flex-wrap: wrap;
     gap: 24px;
 }
+
 .eventBox{
     background: white;
     padding: 2px;
@@ -44,47 +45,51 @@ section{
     width: 100%;
 }
 
-/*이벤트 박스 호버 시*/
-.eventBox:hover.eventBox{
-    box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
-}
-
-.eventBox:hover.eventBox img{
-    position: absolute;
-    width: 300px;
-    height: 243px;
-    object-fit: cover;
-}
-
-.eventBox:hover.eventBox ul{
-    transition: height 0.7s;
-    justify-content: space-around;
-    position: relative;
-    width: 300px;
-    height: 243px;
-    margin: 0 auto;
-    padding: 30px;
-    
-    background: rgba( 255, 255, 255, 0.85 );
-    backdrop-filter: blur( 2px );
-    -webkit-backdrop-filter: blur( 2px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-.eventBox:hover.eventBox ul::after{
-    content:"자세히 보기";
-    width: 100%;
-    text-align: center;
-    background: #595959;
-    color: white;
-    border-radius: 8px;
-    padding: 5px;
-}
 
 /*********************************************/
 /*                  미디어쿼리                 */
 /*********************************************/
-/*1) window tab size : 1274 | <wrapper white section 80% under>*/
+/*1) window tab size : 1274 이상 | <wrapper white section 80% upper>*/
+@media screen and (min-width: 1275px) {
+    /*이벤트 박스 호버 시*/
+    .eventBox:hover.eventBox{
+        box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+    }
+    
+    .eventBox:hover.eventBox img{
+        position: absolute;
+        width: 300px;
+        height: 243px;
+        object-fit: cover;
+    }
+    
+    .eventBox:hover.eventBox ul{
+        transition: height 0.7s;
+        justify-content: space-around;
+        position: relative;
+        width: 300px;
+        height: 243px;
+        margin: 0 auto;
+        padding: 30px;
+        
+        background: rgba( 255, 255, 255, 0.85 );
+        backdrop-filter: blur( 2px );
+        -webkit-backdrop-filter: blur( 2px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    
+    .eventBox:hover.eventBox ul::after{
+        content:"자세히 보기";
+        width: 100%;
+        text-align: center;
+        background: #595959;
+        color: white;
+        border-radius: 8px;
+        padding: 5px;
+    }
+}
+
+/*2) window tab size : 1274 | <wrapper white section 80% under>*/
 @media screen and (max-width: 1274px) {
     .eventBox{
         border: none;
@@ -92,6 +97,11 @@ section{
         display: flex;
         border-radius: 5px;
         padding: unset;
+        box-shadow: none;
+    }
+    
+    .eventBox:hover.eventBox ul{
+        transition: unset;
     }
 
     .eventBox ul li div:first-child{
@@ -104,8 +114,15 @@ section{
 
     .eventBox img{
         border-radius: 5px 0 0 5px;
-        height: 100%;
-        width: 100%;
+        object-fit: cover;
     }
+}
 
+/*3) mobile 환경 | 디바이스 장치가 최소 767px일 때*/
+@media screen and (max-width: 767px) {
+    .eventBox img {
+        width: 200px;
+        height: unset;
+        object-fit: cover;
+    }
 }
