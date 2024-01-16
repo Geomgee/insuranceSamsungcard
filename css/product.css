@@ -15,25 +15,37 @@ header {
 }
 
 section {
-    /*position: relative;*/
     width: 100%;
     max-width: 1022px;
     margin: 0 auto;
     padding: 0 25px;
+    position: relative;
 }
 
 /*productNav*/
+.stickySection{
+    /*border: 1px solid tomato;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    margin-top: 30px;
+}
+
 .productNav {
+    position: relative;
     background: transparent;
-    z-index: 1;
+    z-index: 4;
     display: flex;
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: 180px;
-    padding: 60px 0;
+    height: 90px;
+    padding: 20px 20px;
     /*max-width: 960px;*/
     transition: top 0.2s ease-in-out;
+
 }
 
 /*스크롤*/
@@ -66,6 +78,8 @@ section {
 
 
 h3 {
+    padding: 170px 0 20px 0;
+    position: relative;
     text-align: center;
     font-weight: bolder;
 }
@@ -78,7 +92,7 @@ h3 {
     right: 0;
     width: 100%;
     height: 40px;
-
+    z-index: 4;
 }
 
 .whiteBtn {
@@ -223,10 +237,6 @@ h3 {
 /*********************************************/
 /*1) window tab size : 1274 | <wrapper white section 80% under>*/
 @media screen and (max-width: 1274px) {
-    /*.cardSection {*/
-    /*    justify-content: space-between;*/
-    /*}*/
-
     .cardSection .cardSection-item-list {
         width: 100%;
     }
@@ -237,29 +247,19 @@ h3 {
 
 /*2) mobile 환경 | 디바이스 장치가 최소 767px일 때*/
 @media screen and (max-width: 767px) {
-    /*nav*/
-    header {
-        position: sticky;
-    }
-
-    section, .selectDropdown {
-        margin-top: 40px;
-    }
-
-    nav.productNav {
-        display: unset !important;
-        position: relative;
-        height: 100%;
-    }
-
-    section div:nth-of-type(1) h3 {
+    section>div>h3 {
         display: none;
     }
 
     .productNav ul li a {
         font-size: 13px;
     }
-
+    
+    .selectDropdown{
+        margin-top: 100px;
+        
+    }
+    
     .cardSection .cardSection-item-list {
         width: 100%;
         height: 181px;
@@ -268,5 +268,24 @@ h3 {
     .cardSection .cardSection-item-list ul {
         height: 90px;
         gap: unset;
+    }
+    
+    /*product nav*/
+    .stickySection {
+        margin-top: 15px;
+    }
+    .productNav{
+        position: sticky;
+        padding-top: 0;
+    }
+    .productNav ul{
+        flex-wrap: wrap;
+        height: 120px;
+        position: relative;
+    }
+    
+    .productNav ul li {
+        width: 33.3333%;
+        line-height: 60px;
     }
 }

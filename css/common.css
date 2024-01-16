@@ -1099,7 +1099,7 @@ input#birth2{
         padding: unset;
     }
 
-    nav:not(.mobileNav), div.shadowWrap{
+    nav:not(.mobileNav, .productNav), div.shadowWrap{
         display: none;
     }
 
