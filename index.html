@@ -185,13 +185,12 @@
     </header>
     <!--mobile nav-->
     <nav class="mobileNav">
-        <button type="button" class="btn-menu hamburger"></button>
-        <button type="button" class="btn-close"></button>
         <!--M nav 클릭 전 숨겨질 영역-->
         <div class="mobileNavList">
             <div>
-                <h2 class="logo"><a href="index.html"></a></h2>
-
+                <h2 class="logo">
+                    <a href="index.html"></a>
+                </h2>
             </div>
             <ul>
                 <div class="menu-top-btn">
@@ -234,6 +233,10 @@
                     <li><a href="counsel.html">보험상담</a></li>
                 </div>
             </ul>
+        </div>
+        <div class="fixedSectionNavM">
+            <button type="button" class="btn-menu hamburger"></button>
+            <button type="button" class="btn-close"></button>
         </div>
     </nav>
     <!--최상단 캐로셀-->
@@ -604,7 +607,6 @@
 <script>
     $(function () {
         ScrollOut();
-
 
         /*slick*/
         $('.responsive').slick({
