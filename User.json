@@ -3,8 +3,7 @@
         "id":1,
         "name":"김 태리",
         "age":24,
-        "personalColor":"blue",
-        "hobbies" : ["warchingMovie", "playingthePiano"]
+        "personalColor":"blue"
     },
     {
         "id":2,
