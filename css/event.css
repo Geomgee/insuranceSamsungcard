@@ -46,6 +46,7 @@ section{
 }
 
 .eventBoxParent a{
+    width: unset;
     height: unset;
     color: black;
 }
