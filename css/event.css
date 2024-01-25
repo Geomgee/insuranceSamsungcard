@@ -97,6 +97,9 @@ section{
 
 /*2) window tab size : 1274 | <wrapper white section 80% under>*/
 @media screen and (max-width: 1274px) {
+    .eventBoxParent a{
+        width: 100%;
+    }
     .eventBox{
         border: none;
         width: 100%;

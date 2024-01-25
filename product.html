@@ -49,7 +49,7 @@
                     </div>
                     <div>
                         <span><a href="#">아이디 찾기</a></span>
-                        <span class="signUpBtn">회원가입</span>
+                        <span class="pointer signUpBtn">회원가입</span>
                     </div>
                 </form>
             </div>
@@ -60,9 +60,9 @@
                     <button type="button" class="btn-close"></button>
                 </div>
                 <form action="signUp">
-                    <label for="id">아이디</label>
+                    <label for="addId">아이디</label>
                     <input type="text" id="addId" placeholder="아이디 6~12자리 입력">
-                    <label for="id">비밀번호</label>
+                    <label for="addPw">비밀번호</label>
                     <input type="password" id="addPw" placeholder="비밀번호 6~20자리 입력">
                     <label for="mail">이메일</label>
                     <div class="gg-dja">
@@ -108,8 +108,8 @@
             <div id="main-menu">
                 <!--nav 최상단 영역 | 홈페이지 / 로그인-->
                 <div class="headerTop">
-                    <span><a href="#">삼성카드 홈페이지</a></span>
-                    <span class="loginBtn">로그인</span>
+                    <span class="g-disable gg-gray">삼성카드 홈페이지</span>
+                    <span class="loginBtn pointer">로그인</span>
                 </div>
                 <!--main nav-->
                 <div class="headerBot">
@@ -131,18 +131,18 @@
             <div class="nav-menu">
                 <ul>
                     <li class="menu-top">카테고리</li>
-                    <li class="show1"><a href="#">자동차</a></li>
-                    <li class="show2"><a href="#">기타</a></li>
-                    <li class="show3"><a href="#">암·건강</a></li>
-                    <li class="show4"><a href="#">이륜차·운전자</a></li>
-                    <li class="show5"><a href="#">여행·레저</a></li>
+                    <li class="show1"><a href="product.html">자동차</a></li>
+                    <li class="show2"><a href="product.html">기타</a></li>
+                    <li class="show3"><a href="product.html">암·건강</a></li>
+                    <li class="show4"><a href="product.html">이륜차·운전자</a></li>
+                    <li class="show5"><a href="product.html">여행·레저</a></li>
                 </ul>
                 <ul>
                     <li class="menu-top">상품 모아보기</li>
-                    <li><a href="#">인기순위</a></li>
-                    <li><a href="#">신규상품</a></li>
-                    <li><a href="#">보험사별</a></li>
-                    <li><a href="#">전체보기</a></li>
+                    <li><a href="product.html">인기순위</a></li>
+                    <li><a href="product.html">신규상품</a></li>
+                    <li><a href="product.html">보험사별</a></li>
+                    <li><a href="product.html">전체보기</a></li>
                 </ul>
                 <ul>
                     <li class="menu-top">혜택</li>
@@ -172,10 +172,15 @@
     <nav class="mobileNav">
         <!--M nav 클릭 전 숨겨질 영역-->
         <div class="mobileNavList">
-            <div>
+            <div class="mobileVer">
                 <h2 class="logo">
                     <a href="index.html"></a>
                 </h2>
+                <div class="headerTop">
+                    <span class="loginBtn pointer">로그인</span>
+                    <span>|</span>
+                    <span class="pointer signUpBtn">회원가입</span>
+                </div>
             </div>
             <ul>
                 <div class="menu-top-btn">
@@ -222,17 +227,6 @@
         <div class="fixedSectionNavM">
             <button type="button" class="btn-menu hamburger"></button>
             <button type="button" class="btn-close"></button>
-            <!-- [M] product Nav -->
-            <nav class="productNav mobileVer">
-                <ul>
-                    <li class="navActive"><a href="#">전체</a></li>
-                    <li class="show1"><a href="#">자동차</a></li>
-                    <li class="show2"><a href="#">암·건강</a></li>
-                    <li class="show3"><a href="#">여행·레저</a></li>
-                    <li class="show4"><a href="#">이륜차·운전자</a></li>
-                    <li class="show5"><a href="#">기타</a></li>
-                </ul>
-            </nav>
         </div>
     </nav>
     <section>
@@ -665,7 +659,7 @@
                 <ul class="tel">
                     <li>
                         대표전화
-                        <span>1588-8700</span>
+                        <span><a href="tel:1588-8700">1588-8700</a></span>
                     </li>
                     <li>
                         카드신청
