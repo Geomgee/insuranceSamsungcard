@@ -13,6 +13,18 @@
     box-sizing: border-box;
 }
 
+.element.style {
+    padding-right: unset;
+}
+
+:root{
+    --body : #F3F3F8;
+    --blue : #2090FF;
+    --dBlue : #2E81F8;
+    --grey : #E2E5EB;
+    --ggGrey : #797979;
+}
+
 body {
     color: black;
 }
@@ -43,7 +55,6 @@ a, button, a:hover {
 
 #wrapper {
     font-family: 'SpoqaHanSansNeo-Regular', serif;
-    /*min-width: 637px;*/
     width: 100%;
     height: 500%;
     margin: 0 auto;
@@ -61,7 +72,6 @@ section{
 
 header {
     width: 100%;
-    /*border: 1px solid blueviolet;*/
     position: relative;
     margin: 0 auto;
     height: 137px;
@@ -75,20 +85,34 @@ header {
 }
 
 .headerTop a {
-    color: #797979;
+    color: var(--ggGrey);
     font-size: 15px;
     font-weight: normal;
 }
 
-.headerTop .loginBtn{
+.headerTop .logBtn, .logBtn a{
     font-size: 14px;
     color: #666666;
     font-weight: normal;
+    padding: 0;
 }
 
 /* common style */
 .pointer {
     cursor: pointer;
+}
+
+/* 비활성화 */
+.g-disable{
+    color: var(--ggGrey) !important;
+    opacity: 0.65 !important;
+    cursor : default !important;
+}
+
+.g-disable:hover{
+    color: var(--ggGrey) !important;
+    opacity: 0.65 !important;
+    cursor : default !important;
 }
 
 .font13 {
@@ -109,7 +133,7 @@ header {
 }
 
 .gg-gray{
-    color: #797979;
+    color: var(--ggGrey);
 }
 
 .c-littleBlue{
@@ -117,12 +141,16 @@ header {
 }
 
 .gg-text-blue{
-    color: #2e81f8;
+    color: var(--dBlue);
     font-weight: bold;
     font-size: 16px;
 }
 
 /*레이아웃*/
+
+.zI4{
+    z-index: 5;
+}
 
 .img-h24 {
     height: 24px;
@@ -145,6 +173,10 @@ header {
 
 .dNon{
     display: none;
+}
+
+.dUnset{
+    display: unset;
 }
 
 
@@ -183,6 +215,8 @@ nav {
     /*position: relative;*/
     font-weight: bolder;
     width: 100%;
+}
+nav:not(.productNav) {
     z-index: 4;
 }
 
@@ -287,7 +321,7 @@ nav ul {
 .headerTop span:hover,
 .nav-menu li a:hover,
 .mobileNavList ul .menu-hidden li:hover a{
-    color: #2e81f8;
+    color: var(--dBlue);
 }
 
 .main li {
@@ -309,19 +343,19 @@ nav ul {
     right: 0;
     bottom: -8px;
     height: 0;
-    border: 1px solid #2e81f8;
+    border: 1px solid var(--dBlue);
     transition: width 0.5s;
 }
 
 .main li:hover a::after {
     /*width: 100%;*/
-    background-color: #2e81f8;
+    background-color: var(--dBlue);
 }
 
 /*nav의 menu 클릭 시 그림자 효과*/
 .shadowWrap {
     content: "";
-    background-color: #797979;
+    background-color: var(--ggGrey);
     opacity: 0.6;
     position: fixed;
     width: 100vw;
@@ -332,10 +366,10 @@ nav ul {
     scrollbar-width: none;
 }
 
-/*mobile nav*/
+/* [M] mobile nav */
 .mobileNav{
     position: fixed;
-    height: 100vh;
+    width: 100%;
     top: 0;
     right: 0;
     display: none;
@@ -350,6 +384,18 @@ nav ul {
     right: 0;
     padding: 20px;
     display: none;
+    z-index: 4;
+}
+
+/*mobile Nav TOP 영역 (로고 버튼 로그인/회원가입) */
+.mobileNavList .mobileVer .headerTop{
+    right: 0;
+    width: 60%;
+    height: 50px;
+    line-height: 50px;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin: 0 auto;
 }
 
 .mobileNavList .logo{
@@ -401,7 +447,7 @@ nav ul {
 .fixedSectionNavM{
     width: 100%;
     height: 50px;
-    
+    z-index: 4;
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 2px 6px 0 rgba( 31, 38, 135, 0.1 );
     backdrop-filter: blur( 6px );
@@ -411,9 +457,9 @@ nav ul {
 }
 
 .back-none{
-    background: unset;
-    box-shadow: unset;
-    backdrop-filter: unset;
+    background: transparent !important;
+    box-shadow: unset !important;
+    backdrop-filter: unset !important;
 }
 
 /*icon*/
@@ -477,7 +523,7 @@ input[type=search]::placeholder {
 
 /*search hover&active*/
 input[type=search]:hover, input[type=search] .active {
-    border: 2px solid #2e81f8;
+    border: 2px solid var(--dBlue);
 }
 
 /*search X button hide*/
@@ -529,7 +575,7 @@ input:hover::-webkit-search-results-decoration {
 }
 
 .keyword button:hover, .keyword button:active {
-    background-color: #2090FF;
+    background-color: var(--blue);
     color: white;
 }
 
@@ -556,8 +602,14 @@ footer .tel li {
 }
 
 footer .tel li span {
-    color: #2090FF;
+    color: var(--blue);
 }
+
+footer .tel li a{
+    display: inline-block;
+    width: unset;
+}
+
 
 .realFooter {
     padding: 0 25px;
@@ -574,7 +626,7 @@ footer .tel li span {
 .realFooter .footerTop {
     padding-top: 40px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #E2E5EB;
+    border-bottom: 1px solid var(--grey);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -608,6 +660,7 @@ footer .tel li span {
     background-size: 125px 24px;
     float: left;
     margin: 3px;
+    text-indent: -9999px;
 }
 
 .sns li:nth-of-type(2) {
@@ -667,7 +720,7 @@ footer .tel li span {
     height: 13px;
     margin: 4px 0 0 15px;
     position: absolute;
-    background-color: #E2E5EB;
+    background-color: var(--grey);
 }
 
 .footerBot ul li:nth-of-type(3)::after, .footerBot ul li:nth-of-type(6)::after {
@@ -803,7 +856,7 @@ button.btn.dropdown-toggle{
     width: 100%;
     height: 165px;
     position: relative;
-    border-bottom: 1px solid #E2E5EB;
+    border-bottom: 1px solid var(--grey);
 }
 
 .withNeedINmobile ul {
@@ -887,9 +940,9 @@ button.btn.dropdown-toggle{
     width: 100%;
     height: 100%;
     z-index: 4444;
-    padding-top: 200px;
+    padding-top: 100px;
     font-size: 14px;
-    
+
     /*blur 효과*/
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -901,13 +954,13 @@ button.btn.dropdown-toggle{
 .loginBox {
     width: 450px;
     padding: 50px;
-    margin: 0 auto;
+    margin: 40px auto 0;
     /*border: 1px solid #dcdcdc;*/
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    
+
     /*blur 효과*/
     /*background: white;*/
     /*box-shadow: 0 4px 12px rgb(0 0 0 / 20%);*/
@@ -946,18 +999,28 @@ button.btn.dropdown-toggle{
     font-weight: normal;
 }
 
+#signUp.loginBox input, #signUp.loginBox select {
+    width: 100%
+}
+
 .loginBox input::placeholder {
     color: #dcdcdc;
 }
 
-.loginBox input[type=button], .loginBox input[type=submit] {
-    background: #2090FF;
+.loginBox input[type=button],
+.loginBox input[type=submit],
+#signUp.loginBox input[type=submit] {
+    background: var(--blue);
     border: none;
     color: white;
 }
 
+#signUp.loginBox input[type=submit] {
+    width: 333px;
+}
+
 .loginBox input:hover, .loginBox input:active {
-    border: 1px solid #2090FF;
+    border: 1px solid var(--blue);
 }
 
 .idBtn{
@@ -979,8 +1042,9 @@ button.btn.dropdown-toggle{
     cursor: pointer;
     width: 23px;
     height: 23px;
-    background: url(../img/bg_form_blue_small.png) no-repeat -50px 0;
+    background: url(../img/bg_form_blue_small.png) no-repeat -50px 1px;
     vertical-align: middle;
+    align-self: center;
 }
 .loginBox input[type=checkbox]:checked + label {
     background: url(../img/bg_form_blue_small.png) no-repeat;
@@ -1008,8 +1072,9 @@ label span{
 .loginBox form>div:last-child a{
     color: #444444;
 }
+
 .loginBox form>div:last-child a:hover{
-    color: #2090FF;
+    color: var(--blue);
 }
 
 /*-----------------signUp*/
@@ -1017,7 +1082,9 @@ label span{
     overflow: hidden;
     overflow-y: scroll;
     height: 650px;
+    margin-top: 0;
 }
+
 
 /* 스크롤바 트랙 위쪽 여백 공간 주기 위해서 */
 #signUp::-webkit-scrollbar-button:vertical:start:decrement,
@@ -1042,11 +1109,11 @@ label span{
     align-items: flex-start;
 }
 
-#signUp input#mail1, #signUp select, #signUp input#birth1{
+#signUp.loginBox input#mail1, #signUp.loginBox select, #signUp.loginBox input#birth1{
     width: 46%;
 }
 
-input#birth2{
+#signUp.loginBox input#birth2{
     width: 29%;
 }
 
@@ -1055,6 +1122,13 @@ input#birth2{
     text-align: center;
 }
 
+
+/*회원가입 유효성 부분*/
+.text-muted{
+    margin-top: -12px;
+    margin-left: 10px;
+    display: none;
+}
 
 
 /*****************************************************************/
@@ -1090,11 +1164,11 @@ input#birth2{
     .shadowWrap{
         top: 0;
     }
-    
+
     header {
         height: 50px;
     }
-    
+
     nav{
         padding: unset;
     }
@@ -1146,8 +1220,8 @@ input#birth2{
     .withNeedINmobileBtn {
         line-height: 74px;
         height: 74px;
-        border-top: 1px solid #E2E5EB;
-        border-bottom: 1px solid #E2E5EB;
+        border-top: 1px solid var(--grey);
+        border-bottom: 1px solid var(--grey);
     }
 
     .withNeedINmobile hr.c-g {
@@ -1171,9 +1245,7 @@ input#birth2{
     /*footerLogo-mobile*/
     .footerLogo{
         position: static;
-        margin-top: 24px;
-        margin-bottom: 0px;
-        margin-right: 0px;
+        margin: 24px 0 0 0;
     }
 
     .footerLogo img{
@@ -1205,6 +1277,7 @@ input#birth2{
     .footerBot{
         padding-bottom: 16px;
     }
+
     .footerBot ul:last-child li:first-child{
         padding-bottom: 10px;
     }

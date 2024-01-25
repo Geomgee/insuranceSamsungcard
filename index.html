@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>샘송카드 다이렉트 보험</title>
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="//static12.samsungcard.com/images/insurance/favicon.ico">
@@ -30,7 +31,8 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
     <!--제이쿼리-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="
+    https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
@@ -64,7 +66,7 @@
                     </div>
                     <div>
                         <span><a href="#">아이디 찾기</a></span>
-                        <span class="signUpBtn">회원가입</span>
+                        <span class="pointer signUpBtn">회원가입</span>
                     </div>
                 </form>
             </div>
@@ -123,8 +125,8 @@
             <div id="main-menu">
                 <!--nav 최상단 영역 | 홈페이지 / 로그인-->
                 <div class="headerTop">
-                    <span><a href="#">삼성카드 홈페이지</a></span>
-                    <span class="loginBtn">로그인</span>
+                    <span class="g-disable gg-gray">삼성카드 홈페이지</span>
+                    <span class="loginBtn pointer">로그인</span>
                 </div>
                 <!--main nav-->
                 <div class="headerBot">
@@ -146,18 +148,18 @@
             <div class="nav-menu">
                 <ul>
                     <li class="menu-top">카테고리</li>
-                    <li class="show1"><a href="#">자동차</a></li>
-                    <li class="show2"><a href="#">기타</a></li>
-                    <li class="show3"><a href="#">암·건강</a></li>
-                    <li class="show4"><a href="#">이륜차·운전자</a></li>
-                    <li class="show5"><a href="#">여행·레저</a></li>
+                    <li class="show1"><a href="product.html">자동차</a></li>
+                    <li class="show2"><a href="product.html">기타</a></li>
+                    <li class="show3"><a href="product.html">암·건강</a></li>
+                    <li class="show4"><a href="product.html">이륜차·운전자</a></li>
+                    <li class="show5"><a href="product.html">여행·레저</a></li>
                 </ul>
                 <ul>
                     <li class="menu-top">상품 모아보기</li>
-                    <li><a href="#">인기순위</a></li>
-                    <li><a href="#">신규상품</a></li>
-                    <li><a href="#">보험사별</a></li>
-                    <li><a href="#">전체보기</a></li>
+                    <li><a href="product.html">인기순위</a></li>
+                    <li><a href="product.html">신규상품</a></li>
+                    <li><a href="product.html">보험사별</a></li>
+                    <li><a href="product.html">전체보기</a></li>
                 </ul>
                 <ul>
                     <li class="menu-top">혜택</li>
@@ -187,10 +189,15 @@
     <nav class="mobileNav">
         <!--M nav 클릭 전 숨겨질 영역-->
         <div class="mobileNavList">
-            <div>
+            <div class="mobileVer">
                 <h2 class="logo">
                     <a href="index.html"></a>
                 </h2>
+                <div class="headerTop">
+                    <span class="loginBtn pointer">로그인</span>
+                    <span>|</span>
+                    <span class="pointer signUpBtn">회원가입</span>
+                </div>
             </div>
             <ul>
                 <div class="menu-top-btn">
@@ -290,14 +297,14 @@
             <div class="box">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="eventDetail.html">
                             <img src="img/icon-maincon01-01.png" alt="">
                             <strong>입원비 보험</strong>
                             <span>입원 첫날부터 입원일당을 주는</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="eventDetail.html">
                             <img src="img/icon-maincon01-02.png" alt="">
                             <strong>카드값 걱정없는 건강보험</strong>
                             <span>아픈데 카드 값이 걱정이라면?!</span>
@@ -341,30 +348,36 @@
             </div>
             <ul class="scroll-box">
                 <li>
-                    <div>
-                        <img src="img/01_traveler_510x336.png" alt="">
-                    </div>
                     <a href="eventDetail.html">
-                        <strong>보험료를 포인트로 여행자보험 알아보기</strong><br>
-                        <span>2023.11.01 ~ 2023.12.31</span>
+                        <div>
+                            <img src="img/01_traveler_510x336.png" alt="">
+                        </div>
+                        <div class="eventTxtBox">
+                            <strong>보험료를 포인트로 여행자보험 알아보기</strong><br>
+                            <span>2023.11.01 ~ 2023.12.31</span>
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <div>
-                        <img src="img/02_two-wheeler_510x336.png" alt="">
-                    </div>
                     <a href="eventDetail.html">
-                        <strong>안전한 라이딩의 필수품 이륜차보험도 다이렉트로</strong><br>
-                        <span>2023.11.01 ~ 2023.12.31</span>
+                        <div>
+                            <img src="img/02_two-wheeler_510x336.png" alt="">
+                        </div>
+                        <div class="eventTxtBox">
+                            <strong>안전한 라이딩의 필수품 이륜차보험도 다이렉트로</strong><br>
+                            <span>2023.11.01 ~ 2023.12.31</span>
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <div>
-                        <img src="img/03_meritzpet_510x336.png" alt="">
-                    </div>
                     <a href="eventDetail.html">
-                        <strong>메리츠 펫보험 가입&결제 시 최대 3만원 신세계상품권 혜택</strong><br>
-                        <span>2023.11.01 ~ 2023.12.31</span>
+                        <div>
+                            <img src="img/03_meritzpet_510x336.png" alt="">
+                        </div>
+                        <div class="eventTxtBox">
+                            <strong>메리츠 펫보험 가입&결제 시 최대 3만원 신세계상품권 혜택</strong><br>
+                            <span>2023.11.01 ~ 2023.12.31</span>
+                        </div>
                     </a>
                 </li>
             </ul>
@@ -382,8 +395,6 @@
 </div>
 <hr class="c-g">
 <section class="partner">
-    <button type="button" class="slick-prev">Previous</button>
-    <button type="button" class="slick-next">Next</button>
     <div class="partner responsive">
         <div>
             <img src="img/img-partner01.png" alt="">
@@ -438,7 +449,7 @@
             <ul class="tel">
                 <li>
                     대표전화
-                    <span>1588-8700</span>
+                    <span><a href="tel:1588-8700">1588-8700</a></span>
                 </li>
                 <li>
                     카드신청
@@ -449,21 +460,21 @@
                 </li>
             </ul>
             <hr>
-            <ul class="sns">
+            <ul class="sns g-disable">
                 <li>
-                    <a href="#">instagram</a>
+                    instagram
                 </li>
                 <li>
-                    <a href="#">facebook</a>
+                    facebook
                 </li>
                 <li>
-                    <a href="#">youtube</a>
+                    youtube
                 </li>
                 <li>
-                    <a href="#">kakao</a>
+                    kakao
                 </li>
                 <li>
-                    <a href="#">blog</a>
+                    blog
                 </li>
             </ul>
         </div>
@@ -512,42 +523,23 @@
             </div>
         </div>
         <div class="snsInMobile">
-            <ul class="sns">
+            <ul class="sns g-disable">
                 <li>
-                    <a href="#">instagram</a>
+                    instagram
                 </li>
                 <li>
-                    <a href="#">facebook</a>
+                    facebook
                 </li>
                 <li>
-                    <a href="#">youtube</a>
+                    youtube
                 </li>
                 <li>
-                    <a href="#">kakao</a>
+                    kakao
                 </li>
                 <li>
-                    <a href="#">blog</a>
+                    blog
                 </li>
             </ul>
-        </div>
-        <div class="familysite">
-            <div class="btn-group dropup">
-                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
-                        aria-expanded="false">
-                    패밀리사이트
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">쇼핑</a>
-                    <a class="dropdown-item" href="#">여행</a>
-                    <a class="dropdown-item" href="#">웨딩</a>
-                    <a class="dropdown-item" href="#">보험</a>
-                    <a class="dropdown-item" href="#">아지냥이</a>
-                    <a class="dropdown-item" href="#">열린나눔</a>
-                    <a class="dropdown-item" href="#">Young Lab</a>
-                    <a class="dropdown-item" href="#">U포인트</a>
-                    <a class="dropdown-item" href="#">삼성카드고객서비스</a>
-                </div>
-            </div>
         </div>
         <div class="footerLogo">
             <img src="img/img-footer-logo.png" alt="samsung logo">
@@ -603,40 +595,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
 <script src="js/myScript.js"></script>
-
-<script>
-    $(function () {
-        ScrollOut();
-
-        /*slick*/
-        $('.responsive').slick({
-            rows: 1,
-            arrows: true,
-            dots: false,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 9,
-            slidesToScroll: 2,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 6,
-                        slidesToScroll: 3,
-                        infinite: true,
-                    }
-                },
-                {
-                    breakpoint: 720,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 2
-                    }
-                }
-            ]
-        });
-    })
-</script>
+<script src="js/indexScript.js"></script>
 
 </body>
 </html>

@@ -123,10 +123,12 @@ section{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px;
+	padding: 0 20px;
+	margin-top: 1rem;
 }
 .notice .noticeBtn h3{
 	font-size: 15px;
+	margin: 0;
 }
 .notice .arrow-down{
 	position: unset;

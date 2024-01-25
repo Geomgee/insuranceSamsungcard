@@ -64,6 +64,7 @@ let mobileNavListUl = $(".mobileNavList ul");
 let mobileNavBtn = $(".mobileNav .hamburger");
 let mobileNavCloseBtn = $(".mobileNav .btn-close");
 let menuHidden = $(".menu-hidden");
+let productNav = $(".productNav.mobileVer");
 
 mobileNavList.hide();
 mobileNavCloseBtn.hide();
@@ -73,7 +74,9 @@ function openMobileNav() {
     mobileNavList.show();
     mobileNavBtn.hide();
     mobileNavCloseBtn.show();
+    productNav.hide();
     $(".fixedSectionNavM").addClass("back-none");
+    $(".mobileNav").addClass("back-none");
     shadow.show();
     showMenu();
 }
@@ -82,7 +85,9 @@ function closeMobileNav() {
     mobileNavList.hide();
     mobileNavBtn.show();
     mobileNavCloseBtn.hide();
+    productNav.show();
     $(".fixedSectionNavM").removeClass("back-none");
+    $(".mobileNav").removeClass("back-none");
     shadow.hide();
     closeMenu();
 }
@@ -99,29 +104,6 @@ mobileNavListUl.click(function () {
 
 mobileNavBtn.click(openMobileNav);
 mobileNavCloseBtn.click(closeMobileNav);
-
-
-/*-------------------------------------------------------------*/
-
-
-/* 캐러셀 일시정지 & 동작 */
-let pauseBtn = $(".pauseBtn");
-let playBtn = $("#carousel .material-symbols-outlined");
-
-$('.carousel').carousel({
-    interval: 2000
-})
-pauseBtn.click(function () {
-    $('#carouselExampleIndicators').carousel('pause');
-    pauseBtn.hide();
-    playBtn.show();
-});
-playBtn.click(function () {
-    $('#carouselExampleIndicators').carousel('cycle');
-    pauseBtn.show();
-    playBtn.hide();
-});
-/*-------------------------------------------------------------*/
 
 /* footer *******************/
 /* withNeedINmobileBtn */
@@ -172,6 +154,7 @@ loginBtn.click(function () {
 
 /* 회원가입 모달 열기 */
 signUpBtn.click(function () {
+    loginModal.show();
     loginBox.hide();
     signUpBox.addClass("animate__animated animate__fadeIn");
     signUpBox.show();
@@ -184,7 +167,7 @@ logincloseBtn.click(function () {
 });
 
 signUpcloseBtn.click(function () {
-    signUpBox.addClass("animate__animated animate__slideInDown");
+    signUpBox.addClass("animate__animated animate__fadeInDown");
     signUpBox.hide();
     loginModal.hide();
     $('body').css('overflow', 'auto');

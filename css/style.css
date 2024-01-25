@@ -311,8 +311,10 @@ ol.carousel-indicators li.active {
     width: 100%;
     background-color: #f4F6FB;
     height: 100px;
-    padding: 32px 24px 32px 72px;
     margin: 0;
+}
+.need ul li a{
+    padding: 32px 24px 32px 72px;
 }
 
 #content-area .need ul li img {
@@ -361,27 +363,29 @@ ol.carousel-indicators li.active {
 .event ul li {
     float: left;
     width: 255px;
-    /*background-color: #f4F6FB;*/
+    background-color: #f4F6FB;
     border-radius: 12px;
     bottom: 0;
-}
-
-.event ul li div {
-    border-radius: 12px 12px 0 0;
-    overflow: hidden;
 }
 
 .event ul li a {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 18px;
+    /*padding: 18px;*/
     width: 100%;
-    height: 116px;
-    background-color: #f4F6FB;
+    height: 100%;
+    /*height: 116px;*/
     z-index: 999;
-    border-radius: 0 0 12px 12px;
+}
 
+.event ul li div:nth-of-type(1) {
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.event ul li div:nth-of-type(2) {
+    padding: 18px;
 }
 
 .event img {
@@ -398,9 +402,8 @@ ol.carousel-indicators li.active {
 
 .event img:hover {
     bottom: 0;
-    /*todo 이미지 영역 확인;*/
     transform: scale(1.1);
-    /*object-fit: none;*/
+    border-radius: 12px 12px 0 0;
 }
 
 .event ul li span {
@@ -428,7 +431,7 @@ ol.carousel-indicators li.active {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    background-color: #2090FF;
+    background-color: var(--blue);
 }
 
 .counsel .box div a {
@@ -450,8 +453,9 @@ ol.carousel-indicators li.active {
 }
 
 /*partner*/
+
 hr.c-g {
-    border-top: 1px solid #666666;
+    border-top: 1px solid var(--grey);
 }
 
 .partner img {
@@ -465,10 +469,13 @@ hr.c-g {
 }
 
 /*slick button*/
-.slick-prev, .slick-next {
-    left: 0;
-    right: 0;
-    z-index: 1;
+.slick-prev:before, .slick-next:before {
+    color: var(--grey) !important;
+}
+
+
+.slick-next{
+    right : 0;
 }
 
 /*****************************************************************/
@@ -479,7 +486,7 @@ hr.c-g {
     #wrapper #content-area > div {
         width: 100%;
     }
-    
+
 
     .event img {
         width: 100%;
@@ -661,19 +668,13 @@ hr.c-g {
         display: flex;
         position: relative;
         overflow-y: hidden;
-        white-space: nowrap;
     }
 
     .event ul li a strong {
         display: block;
         float: left;
-        /*height: max-content;*/
         min-width: 160px;
         white-space: pre-wrap;
-    }
-
-    .event ul li {
-        /*overflow: unset;*/
     }
 
     .event ul li, .event ul li a {

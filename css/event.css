@@ -45,6 +45,11 @@ section{
     width: 100%;
 }
 
+.eventBoxParent a{
+    height: unset;
+    color: black;
+}
+
 
 /*********************************************/
 /*                  미디어쿼리                 */
